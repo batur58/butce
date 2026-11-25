@@ -9,145 +9,207 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Bütçe">
 <title>Bütçe Takip</title>
-
-<link rel="icon" href="data:image/png;base64,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">
-<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAQsklEQVR4Xu2dC3BVx3nHz+6ec8+5bxB6AQKBkMxTYJ4GXDuA7QBO69iJnTpp7LHjTurMmKmdqVt3Mk4607TTTmb6iNtMa/Kwsd3gNBnGbccGP8HGhOASDMYSUPEyGAQS6HGf57G7nT1riJCuQEfo6F6d+/0GPB6NJO7d87///fbbb79F0QceUQCgEBiGBRgMEAcA4gC8A84BgHMA3gHnAMA5AO+AcwDgHIB3wDkAcA7AO+AcADgH4B1wDgCcA/AOOAcAzgF4B5wDAOcAvAPOAYBzAN4B5wDAOQDvgHMA4ByAd8A5AHAOwDvgHAA4B+AdcA4AnAPwDjgHAM4BeEf1/iOjBEJolP6lYsM5L/ZLKEzJiUNoAiFGqWPbCucKQuK/AQYhQggmRFFKTiWlJQ6EsWNZjFI9EqmoqVE1LfDK4Iz1XryYTac55yFdF5+DkvkwlJI4EDKz2eq6usb58ysnTozG4+LzJM0juHDO89nsxfPnT7S2njx8WNU0jHGJTDQlIw7OqePMX7lyztKlmq4L/2CMUhpcVfyOkGHUNTSIPzNm7N2+3TZNoqqloI+SEAdCyHGcJWvWzFq0KJ/NmtmsjDzKJCbljFmmqXDeMHduLJnc8corjmUhXPwsQ/FfAcLYzOWaFiyYtWhRNp1WFPGVYE8lAxGfA4xz6XR1Xd3iVascxymFD0bxxUFtO1lZ2bx8eT6XwyXwcSkimJB8JjNt1qz6mTMt0yy6PoosDrE8se2pjY1GNMrLI8K4BghxRZk2a1YpBOFFFofCOVbV6ro6xli5TSUFQQhRx6moro4kEqzYn5Yii4NRakQiiYoKWhqzbCkgxiQaTYwfX/QxKbI4RPhZNquSoVMiY1J8cQAlC4gDGBQQBwDiALxTtPQ5lnEoQiohBCGCEA/0BtvQ4YpCEFIxFiODMWOMF2mjZbTFgRAiGFPG8rZAsW3FsrstS1dVTtnQRzDAcM41hDrS6Ux3jxKNEEz0kKYRwlyZjOYbH1VxqBjnbTudy2uGPr26auakiYunTzMMY8YNM0jgSzeGjHAOQm6+6wuprq7Ws+0tpz892n6up7eXaKGoobs2MkoSGSVxYDcr3JNKT6mp+qMvrPvi0sXz66dGQqEhj1j5MblWvmdK2ZGzZ7ftP/Die7v2th01DCOkqpSNhsuiUbgdkmBs2jal9LH1a//ynj+oTiTk22aMMy7eZClsT5cawh44l7OwfG2W4/z4re3fffmXFzOZRCTi+J9c910cBOPebLZ23LgXNnzr9ua5iqI4lMpotOi7jmMC7taWMsZVIlTS1n7uoX/99/c/bkkmk37rw988ByE4lc2taGrc+dffvb15rkMp51wVMbiQx5h4NkUHKWJSlspwKG2srdn6nb/447V39KRSxP2if/j42zFClmVXJxM/f+KxGTXVNqWqWLSCJoaPSghlLGboG//kkVXN81KZrK/68FEc3J0mf/74Y/WVlQ6lmlt9D1wnMhHAOf/FExsmT6gwTQv79nnzSxwqwel0+vHfX7967mzH9YzrHBTgMjIzVpWI//DhB23b8a8OxhdxIITylj2lpvrpL93NOL8cbwMjBXHnl3uWLVm/ZGE6k/VphH0Rh1i75nIP3nrLuGiEMQZxhk9wzjes+zwXE7gv+CIOyqim619cuoi7tTy+vPCyxw010MqZTQ0Ta3OW5cc4j7w4MEKm5TTU1MydUoe4fA/AyIMQYpzFDWNFU6Nt2X6M88iLAyFkO87sukmRUIi5Ob6RHxjARW6y3DitXmHUj3H2RRwKdRZOqxcJcjc7DviEFIQYak3zY6hHXhwSTR2lLT3Av6H2Sxyjtq0M+DfUfokDCAAgDmBQyiUyELvegxdQfVbQClxJuYhDVM3AotojwRcHd3Mtpy9c/L+zZwnp3zFHHFymtLl+SmU8Lr/T4wAGmeCLgzKmErJ51+4n/22jmkw4V9a4ix3wTHbL00/dvXSx2CMEcfQh+OKQhFQVRyJxw3CuLM0VVYycqwOaxsgYxafdzrFCuYjDLcMURTKMXbGHiURHrt996XLhP8EYXASWsgLOueNKB7vV3gTj8729O1pa/a7gLXHKxTmujq5pcmY5deHCjpZDr+078Mb+AxXx2Mf/8PdCOoqo8i1Dyl0cXASh+Gj7uee6uv/z17/54Oixju5uBQmhTK2qLENBlGNAOhiM87AeevKlzdlsTkGKoeuJWAwjlM6bo3wwtQQJuHMwN5i4+gEqOWskYlG3xoCL2m6E/NvNGkMEVhzU1QRGyNA0RVFsx7n6U+l3+lRGpmPoQfpBYMUhH+2pzgs7Wg+9um//jpbWcCRCr9XlAbt6EmKyrO5M1o8RH0MEUBxyRbplz/8+++bbe4+f7OjqUhSkG7qK8WBl2kITGFHKMqbFbItooYZJtV9ZcRNymwOU51JFUYIoDhEuIPTsm9u37todq6hIxGIymBgsjEAISU3oRnhB/ZTbmueuv3H+8qamiF7uHSIC6BySZCRMolFCyNUTWeLCBkoXNUy7Z+nitQuab5xW37flQai8ix0DKw7KmDxTKrWC3FzWQDBCedP8/h/eu3ZBszQY03Y0lWCEylwZihLo9Pml5gXimG6//bYrQChrWabtyGBF11TG+e4jbT9+e7vtf4OUUiawzkHc8DNtmk7eNCLhRDiczucLl2twngyHdU3tymT2tB3b+uGBHS2t+44eb5hY+/CqWyF9HkB6clmF82UzGm6dPfPe5cveOtjy1KaXEvFYv3oOce2eqv333n0v//o3r3944GRnJ3eopodUTatw02LlTACdQyYqHr9z3d/ef9/C6dPk09156EjB1QrjPBTS/unVrQqloZAeMwz54+m8OTpN2UqZAIpDzh0ywBQNTy07auhXiS455/FwGLnRqPzjx7nTsUgAxSGhjMnKjKih92Zzbe3n3Cs5Cz8jcRVQH0QPLiwYi090BAmsOAjGZ7q6drQc2rb/o/daDn3a1RUOh68+U8jcOeM8b9tmKp3K5kZwoMciARSH9IynX/7lM69u68nlFMZCIT2kXe2mVtlIKWta1LawpjXW1txyy81fXr5M9taF9HnQ+PDEJz2p9PhxSfpZZ/lB298ghHqzWV3T5tdPWTPPzZ3f0BjV9aCNiHcC6BySSCiEVNE465pTSc6yvnn7mm/evnpB/dTLje3kT8lUOneLPAYb275NhgNGYMXRd6dNrj4KVnbJy7Dvv3nF4obp4oJ0VwT9ijmQe+9HwB78UAisOMQzxqLxL+M8Y5rCS3S9YKpDQagnmxUHFxRxr0PfUZNn4Nq7u5/fsXNg7Q8SDa7shtrq+1cud3eChzLgY4nAikMcVMmZFxlXVXXJjIYQIR+0HdU0raA+RL9tjPmAuUOegTt2ruOpnzynaCGlX+CCsZJJr1p+kysOhtyy5CARWHEQguc3Nd678qbb5s1ZcUPTxrfe2XnwY0MPOdRzY0bKmBaLxQyj38QkTssRMnH8OLn/EjwCKA7p///80Ndrx4nHJsmY1rB9/2I6bdsODQ2IbTl3HCduGMGThSRoTngZqQyHMcu2uRtjDuMRyjnoTFe3IsqVB/wChBTO6yZUXG7sFzACKw5ZFSiz4MPRhcRVRFt7e8F5Q/wLGE1xxTFsWyplAjitXHqsw5fEZeRZ6o8+Oa0QMjCLxjjXQqFZkycF1YED6xzXj1zHdvSmPjp1ynAb7vb9nW4vXlqdTM6cNNE1jhHQYqkB4hgUcauUomxvaW2/0BVS+2/NiKuGbKt5at34aDSojZpBHIMi+s4ryqZ3dxZ0BXGkxaGfn++WJV/Z8yMwgDgKI7d23z98ZNu+/dFIgb1+m9JoLHrnwgUyFRsYQfQFxFEAeUeM5Tjffv4lURg24FsIxrlcbs28OTMnTQxw5RiI4wpEix9K3eUvenTjz/YcaYuGDVpwux+hR++4LagZDklgl7KekPuxYnmCsUpIZyq14aebNr/3fiIWG3j2mmCcymZXN89dv3BBsJvKgThEvUY8HJZJ95MdnVs+2PvMa68fO9sulDFgK07WIWuq+jf33yf/P5DpL3AOgTiaoGk/ev3Nzbt2Hz5zpuX0mc6ubk0PJWLRggU+qkq6L3Z/56v3LW9qlEGrJ4saW5S7c4hDTZr2q90fKIwqhIQ1LRmP0UFKvzRCunt61y1b8r0v300ZC3x5ermLQ0aUiUhYbrvLnpMFP9+aqnb39i5qanxxw7c0NycWzPVrH0AcgmvWmWKMuru7V86dveXJJybEYwFevoI4horb8QdnTdM2rW/ccdsPv/FgVNfLRBlltJSVzeOGMhGIrLn7zVxRspbl5PNNU+r+6r4vfe33VsoAdnilIWORcplWLNthliV3yOTT7fv3s9DjUsxhWjazbYXgOXWTH179uUfWfE7srl1qTzgWH/PwCL44pF9MrZowddKkjGP3ZLKOQ0WpsMh7yqu+3VNtwjFEuXoyHJ49edLSGQ13LV64et6ccEh0Bgv8qrUgwReHTEV8ZcVNdy1ZdLar+1xPz4VUuiuTSeXypm07jLn5chQJ6eOikamVE6ZMmFBfVXl57hBL1nLtSRp8cUi4ohiaNr26anp11VA8tuDppnKjXMQhGsa5xTuyZrjv30uImUVGowE+4eiJchGHrORzg9AyiiivkyBvDQDXCYgDGBS/xFH4yDLgA/4NtV/i0NRy7FlQFDTf2kP4Iw6ET3Z0ullIiP58RHrGyc4LCqVD2xvwxsiLQ+w+qGT/yU/cigcQh+/sO3FCHOX14XM48uLgnOuadujTs+d7e8XhjsGbcQHXiehzx/metmNI1fy4kc4XcWiaeqGn552DrfxapRLAsJG9U4+f7/jt8RNhI9SvleqIMPLiEIjT5/ilnbtkwnFEXijQDyZKm9HLu3an02mN+JLM9EUclLFINLx134dvf9xCMIYm4iOOLCvp6E39aNsbhmH4NMK+iEOuUwjGG37yfNa0IPIYcZgb7P/ZC//xaccFPRTyKbDzSxyMsYhhtHxy6vHnX8QIOX0uTQKuE9uhKiE/2/7upu3vxsUlIfQ6f+Fg+CUO0XKJ0mQ8vvG1bf+y9Q2NEMbEhQQ+vY0ygXNuU6qpZE/bsUef/WnEMHzyDImP4hAFVJTGE4lvP/fCn7+4mRBxANWhsu0F4A3u9jdDCGmEbNqxc933/04lYkR9HUxfotzLuCrguq7/YMsrradP/+NDDzTW1rgNLURLC4SG2cetfBDdVN1yV4KxinFvLve9X/zqmVe3aaqmqcRvJ0bRBx4ZhbFWCelJpSvHJf/0zrUPr7plcoXbZA0YMqlcbsuevT/4r/85ePxkPP7ZTblD/ulhMkrikE3mLcfJ53JV48ffOmfWqjmzb5w2dfbkyYRgWeELXIGofebHzp0/eOr0+4cOv3Owta29nahqzDD8i0D7MXrikLVYBCHTcfKmqTCGNa0mmSyfYyDDoDOVMvOicbumh8LuktXvqaQv/sYc/RAnUTlXCUlEowiJVloXM5n+DcWBPmiEGO4kMtjZbl8ZVXFIxPUllxYs/tUiBIOrHOweBYogjr74uhIDrhN/8xzAmAbEAQwKiAMAcQDeAecAwDkA74BzAOAcgHfAOQBwDsA74BwAOAfgHXAOAJwD8A44BwDOAXgHnAMA5wC8A84BgHMA3gHnAMA5AO+AcwDgHIB3wDkAcA7AO+AcADgH4B1wDgCcA/AOOAcAzgF4B5wDAOcAvPP/++D3BxJK1mcAAAAASUVORK5CYII=">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{color-scheme:light dark;--bg:#fff;--ink:#14161a;--mut:#5d6670;--rule:#e3e6e8;--card:#f5f7f7;--teal:#0b5d63;--hd:#0b5d63;--red:#b3412a;--amb:#9a6a00;--wbg:#fff4e0;--rbg:#fbe7e2}
-@media(prefers-color-scheme:dark){:root{--bg:#0d1416;--ink:#e8eeee;--mut:#93a3a6;--rule:#22302f;--card:#121d1f;--teal:#5cc3c9;--hd:#0f3a3e;--red:#f08a72;--amb:#e8b54a;--wbg:#2a2210;--rbg:#2b1612}}
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{color-scheme:light dark;--bg:#f4f6f6;--sf:#fff;--ink:#14161a;--mut:#5d6670;--rule:#e3e7e8;--card:#fff;--soft:#eef3f3;--teal:#0b5d63;--teal2:#0e7a82;--hd:#0b5d63;--red:#b3412a;--amb:#9a6a00;--wbg:#fff4e0;--rbg:#fbe7e2;--sh:0 1px 2px rgba(10,30,32,.06),0 6px 20px rgba(10,30,32,.06)}
+@media(prefers-color-scheme:dark){:root{--bg:#0a1113;--sf:#111b1d;--ink:#e8eeee;--mut:#93a3a6;--rule:#22302f;--card:#121d1f;--soft:#16262a;--teal:#5cc3c9;--teal2:#7fd6db;--hd:#0c3337;--red:#f08a72;--amb:#e8b54a;--wbg:#2a2210;--rbg:#2b1612;--sh:none}}
 *{box-sizing:border-box;min-width:0}
-html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,sans-serif;overflow-x:clip;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,-apple-system,sans-serif;overflow-x:clip;-webkit-tap-highlight-color:transparent}
 [hidden]{display:none!important}
 .num{font-family:"Libre Caslon Text",Georgia,serif;font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
-.w{max-width:1240px;margin:0 auto}
-.screen{min-height:100vh;min-height:100dvh;padding:max(24px,env(safe-area-inset-top)) 16px max(24px,env(safe-area-inset-bottom))}
-.center{display:grid;place-items:center;background:var(--hd);color:#fff;text-align:center}
-.box{width:min(420px,100%);background:var(--bg);color:var(--ink);border-radius:20px;padding:24px;display:grid;gap:12px;text-align:left;box-shadow:0 20px 50px rgba(0,0,0,.25)}
-.box h2{margin:0;font-size:24px;text-align:center}.box .logo{margin:0 auto}
-.logo{width:64px;height:64px;border-radius:18px;background:#fff;color:#0b5d63;display:grid;place-items:center;font:700 34px "Libre Caslon Text",Georgia,serif;margin-bottom:8px}
-.box .logo{background:#0b5d63;color:#fff}
-.sub{display:grid;gap:10px;border-top:1px solid var(--rule);padding-top:14px}.sub h3{margin:0}
-.err{background:var(--rbg);color:var(--red);border-radius:10px;padding:10px 12px;font-size:14px}
-.link{background:none;border:0;color:var(--teal);font:inherit;font-weight:600;cursor:pointer;min-height:40px}
-header{background:var(--hd);color:#fff;padding:max(16px,env(safe-area-inset-top)) max(5vw,16px) 0}
-.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-h1{font-size:17px;font-weight:600;margin:0}
-.role{font-size:13px;background:rgba(255,255,255,.15);padding:3px 10px;border-radius:99px;margin-left:8px;font-weight:500}
-.month{display:flex;align-items:center;gap:4px}.month b{font-weight:500;min-width:8.5em;text-align:center}
-.ib{background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:10px;width:44px;height:44px;font-size:20px;cursor:pointer}
-.hero{margin-top:16px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:end}
-.lbl{font-size:14px;opacity:.8}
-.bal{font-size:clamp(40px,8vw,62px);line-height:1.05;margin:4px 0 0}
-.pair{display:flex;gap:26px;flex-wrap:wrap;margin-top:12px}.pair div{font-size:14px;opacity:.85}.pair .num{display:block;font-size:21px;opacity:1}
-.bud{background:rgba(255,255,255,.08);border-radius:14px;padding:14px 16px;font-size:14px}
-.bar{height:12px;background:rgba(255,255,255,.18);border-radius:99px;overflow:hidden;margin:9px 0 7px}
-.bar i{display:block;height:100%;background:#fff;border-radius:99px;transition:width .5s}.bar i.over{background:#ff9b80}
+.w{max-width:1100px;margin:0 auto}
+button{font:inherit;color:inherit}
+/* giriş ekranları */
+.screen{min-height:100vh;min-height:100dvh;padding:max(28px,env(safe-area-inset-top)) 18px max(28px,env(safe-area-inset-bottom));background:radial-gradient(120% 70% at 50% 0%,#12838a 0%,#0b5d63 45%,#073e42 100%);color:#fff;display:grid;place-items:center}
+.box{width:min(440px,100%);display:grid;gap:14px}
+.brand{text-align:center;margin-bottom:6px}
+.brand .logo{margin:0 auto 12px}
+.brand h1{font:700 30px/1.1 "Libre Caslon Text",Georgia,serif;margin:0}
+.brand p{margin:6px 0 0;opacity:.8}
+.logo{width:72px;height:72px;border-radius:22px;background:#fff;color:#0b5d63;display:grid;place-items:center;font:700 38px Inter,sans-serif;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.panel{background:var(--sf);color:var(--ink);border-radius:22px;padding:20px;display:grid;gap:12px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.panel h2{margin:0;font-size:19px}
+.seg2{display:grid;grid-template-columns:1fr 1fr;background:rgba(255,255,255,.14);border-radius:14px;padding:4px}
+.seg2 button{border:0;background:none;color:#fff;min-height:44px;border-radius:11px;font-weight:600;cursor:pointer}
+.seg2 button[aria-pressed=true]{background:#fff;color:#0b5d63}
+.err{background:var(--rbg);color:var(--red);border-radius:12px;padding:10px 12px;font-size:14px}
+.okm{background:var(--soft);color:var(--teal);border-radius:12px;padding:10px 12px;font-size:14px}
+.link{background:none;border:0;color:#fff;opacity:.85;font-weight:600;cursor:pointer;min-height:44px;text-decoration:underline;text-underline-offset:3px}
+.panel .link{color:var(--teal);opacity:1}
+.wait{text-align:center}.wait .spin{width:46px;height:46px;border-radius:50%;border:4px solid var(--soft);border-top-color:var(--teal);margin:6px auto 4px;animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.pin{display:flex;gap:12px;justify-content:center;margin:8px 0}
+.pin i{width:16px;height:16px;border-radius:50%;border:2px solid #fff;display:block}.pin i.f{background:#fff}
+.pad{display:grid;grid-template-columns:repeat(3,72px);gap:14px;justify-content:center}
+.pad button{height:72px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:26px;font-weight:500;cursor:pointer}
+.pad button:active{background:rgba(255,255,255,.3)}
+/* uygulama */
+header{background:var(--hd);color:#fff;padding:max(14px,env(safe-area-inset-top)) max(4vw,16px) 22px;border-radius:0 0 28px 28px;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;right:-80px;top:-90px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(92,195,201,.35),transparent 70%);pointer-events:none}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;position:relative;z-index:1}
+.gname{font-weight:700;font-size:17px;display:flex;align-items:center;min-width:0}#gTitle{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.role{flex:none}
+.role{font-size:12px;background:rgba(255,255,255,.16);padding:3px 9px;border-radius:99px;margin-left:8px;font-weight:600;vertical-align:2px}
+.month{display:flex;align-items:center;gap:2px;flex:none}.month b{font-weight:600;font-size:14px;min-width:6.8em;text-align:center}
+.ib{background:rgba(255,255,255,.12);color:#fff;border:0;border-radius:12px;width:38px;height:40px;font-size:20px;cursor:pointer}
+.hero{margin-top:14px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:20px;align-items:end;position:relative;z-index:1}
+.lbl{font-size:13px;opacity:.8}
+.bal{font-size:clamp(40px,10vw,60px);line-height:1.05;margin:2px 0 0}
+.pair{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.chip{background:rgba(255,255,255,.1);border-radius:14px;padding:8px 12px;font-size:12px}.chip .num{display:block;font-size:18px}
+.chip.in .num{color:#9ff0e0}.chip.out .num{color:#ffc2b3}.chip.pd .num{color:#ffe08a}
+.bud{background:rgba(255,255,255,.1);border-radius:16px;padding:12px 14px;font-size:13px}
+.bar{height:10px;background:rgba(255,255,255,.18);border-radius:99px;overflow:hidden;margin:8px 0 6px}
+.bar i{display:block;height:100%;background:#fff;border-radius:99px;transition:width .6s}.bar i.warn{background:#ffd36b}.bar i.over{background:#ff9b80}
 .rw{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
-.ann{margin-top:14px;background:#fff;color:#14161a;border-radius:12px;padding:10px 14px;font-size:15px}.ann b{color:#0b5d63}
-.off{margin-top:10px;background:#ffcf7a;color:#3a2a00;border-radius:10px;padding:8px 12px;font-size:14px}
-.cmd{position:relative;margin-top:14px}
-.cmd input{width:100%;height:50px;border-radius:12px;border:0;padding:0 14px 0 42px;font:inherit;font-size:16px;background:rgba(255,255,255,.95);color:#14161a}
-.cmd::before{content:"⌘";position:absolute;left:15px;top:13px;color:#0b5d63;font-weight:700;z-index:1}
-#sug{position:absolute;left:0;right:0;top:54px;background:var(--bg);color:var(--ink);border:1px solid var(--rule);border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.18);z-index:5;overflow:hidden;display:none;max-height:60vh;overflow-y:auto}
-#sug button{display:flex;gap:10px;width:100%;text-align:left;border:0;background:none;color:inherit;font:inherit;padding:10px 14px;cursor:pointer;min-height:44px;align-items:baseline;flex-wrap:wrap}
-#sug button:hover,#sug button.on{background:var(--card)}#sug code{font-weight:600;color:var(--teal)}#sug span{color:var(--mut);font-size:14px}
-.tabs{display:flex;gap:4px;margin-top:16px;overflow-x:auto;scrollbar-width:none}
-.tabs button{border:0;background:none;color:#fff;opacity:.75;font:inherit;font-weight:600;padding:12px 16px;border-radius:12px 12px 0 0;cursor:pointer;flex:none;min-height:44px}
-.tabs button[aria-selected=true]{background:var(--bg);color:var(--ink);opacity:1}
-.bdg{background:var(--red);color:#fff;border-radius:99px;font-size:12px;padding:1px 7px;margin-left:6px}
-main{padding:clamp(20px,3vw,36px) max(5vw,16px) max(70px,env(safe-area-inset-bottom))}
-.pane{display:none}.pane.on{display:grid}
-#p-rec{grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(20px,4vw,48px)}
-#p-sum,#p-adm,#p-me{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start}
-h2{font-size:20px;margin:0 0 12px;font-weight:600}h3{font-size:16px;margin:0 0 10px;font-weight:600}
-.card{background:var(--card);border-radius:16px;padding:18px}
-form.card{display:grid;gap:12px}
-.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--bg);border:1px solid var(--rule);border-radius:12px;padding:4px}
-.seg button{height:40px;border:0;border-radius:9px;background:none;color:var(--ink);font:inherit;font-weight:600;cursor:pointer}
-.seg button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
-label{font-size:14px;color:var(--mut);display:grid;gap:4px}
-input,select,textarea{font:inherit;font-size:16px;min-height:46px;padding:0 12px;border:1px solid var(--rule);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
+.ann{margin-top:14px;background:#fff;color:#14161a;border-radius:14px;padding:10px 14px;font-size:14px;position:relative;z-index:1}.ann b{color:#0b5d63}
+.off{margin-top:10px;background:#ffcf7a;color:#3a2a00;border-radius:12px;padding:8px 12px;font-size:13px;position:relative;z-index:1}
+.cmd{position:relative;margin-top:14px;z-index:3}
+.cmd input{width:100%;height:48px;border-radius:14px;border:0;padding:0 14px 0 42px;font-size:16px;background:rgba(255,255,255,.96);color:#14161a}
+.cmd::before{content:"⌘";position:absolute;left:15px;top:12px;color:#0b5d63;font-weight:700;z-index:1}
+#sug{position:absolute;left:0;right:0;top:52px;background:var(--sf);color:var(--ink);border:1px solid var(--rule);border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.2);overflow:hidden;display:none;max-height:55vh;overflow-y:auto}
+#sug button{display:flex;gap:10px;width:100%;text-align:left;border:0;background:none;padding:10px 14px;cursor:pointer;min-height:44px;align-items:baseline;flex-wrap:wrap}
+#sug button:hover,#sug button.on{background:var(--soft)}#sug code{font-weight:600;color:var(--teal)}#sug span{color:var(--mut);font-size:13px}
+main{padding:18px max(4vw,14px) calc(110px + env(safe-area-inset-bottom))}
+.pane{display:none}.pane.on{display:grid;gap:16px;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+h2{font-size:19px;margin:0}h3{font-size:16px;margin:0 0 10px;font-weight:700}
+.card{background:var(--card);border-radius:20px;padding:16px;box-shadow:var(--sh)}
+.hrow{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+label{font-size:13px;color:var(--mut);display:grid;gap:4px;font-weight:500}
+input,select,textarea{font:inherit;font-size:16px;min-height:48px;padding:0 12px;border:1px solid var(--rule);border-radius:12px;background:var(--sf);color:var(--ink);width:100%}
 textarea{padding:10px 12px;min-height:80px;resize:vertical}
-input[type=color]{padding:4px;width:52px;flex:none}input[type=checkbox]{width:24px;min-height:24px;accent-color:var(--teal)}
+input[type=color]{padding:4px;width:48px;flex:none}input[type=checkbox]{width:24px;min-height:24px;accent-color:var(--teal);flex:none}
 input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
-.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
-.amt{font-family:"Libre Caslon Text",Georgia,serif;font-size:24px;min-height:54px}
-.go{min-height:48px;border:0;border-radius:12px;background:var(--teal);color:var(--bg);font:inherit;font-weight:700;cursor:pointer;padding:0 18px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.go{min-height:50px;border:0;border-radius:14px;background:var(--teal);color:#fff;font-weight:700;cursor:pointer;padding:0 18px}
+@media(prefers-color-scheme:dark){.go{color:#06282b}}
 .go:disabled{opacity:.5}
-.ghost{min-height:44px;border:1px solid var(--rule);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;cursor:pointer;padding:0 14px}
+.ghost{min-height:44px;border:1px solid var(--rule);border-radius:12px;background:var(--sf);cursor:pointer;padding:0 14px}
+.danger{color:var(--red)}
 .btns{display:flex;gap:8px;flex-wrap:wrap}
 .warn{background:var(--wbg);color:var(--amb);border-radius:12px;padding:10px 14px;font-size:14px}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}.filters input,.filters select{flex:1 1 140px;min-height:42px}
+.filters{display:flex;gap:8px;flex-wrap:wrap}.filters input,.filters select{flex:1 1 130px;min-height:42px;font-size:15px}
 ul{list-style:none;margin:0;padding:0}
-.day{font-size:13px;color:var(--mut);padding:14px 0 4px;border-bottom:1px solid var(--rule)}
-li.tx{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:4px 12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--rule)}
-.dot{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-weight:700;font-size:15px;color:#fff}
-.tx .t{font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tx .s{font-size:13px;color:var(--mut)}
-.tx .num{font-size:18px;text-align:right}.neg{color:var(--red)}.pos{color:var(--teal)}
-.acts{grid-column:2/-1;display:flex;gap:6px;flex-wrap:wrap}
-.acts button{min-height:36px;border:1px solid var(--rule);background:var(--bg);color:var(--ink);border-radius:8px;font:inherit;font-size:14px;padding:0 10px;cursor:pointer}
-.acts .ok{background:var(--teal);color:var(--bg);border:0}
-.pill{font-size:12px;border-radius:99px;padding:1px 8px;font-weight:600;margin-left:6px}
-.pill.p{background:var(--wbg);color:var(--amb)}.pill.r{background:var(--rbg);color:var(--red)}
-.hb{margin:0 0 12px}.hb .tr{height:8px;background:var(--rule);border-radius:99px;overflow:hidden;margin-top:5px}.hb .tr i{display:block;height:100%;border-radius:99px}
-.hb .m{color:var(--mut);font-size:13px}
-.cols{display:flex;align-items:flex-end;gap:8px;height:170px;padding-top:20px}
-.cols div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:6px;font-size:12px;color:var(--mut)}
-.cols i{display:block;width:100%;max-width:46px;background:var(--teal);border-radius:6px 6px 0 0;min-height:2px;opacity:.55}.cols .cur i{opacity:1}
-.kpis{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.kpis .card{padding:14px}.kpis .num{font-size:24px;display:block}.kpis span{font-size:14px;color:var(--mut)}
+.day{font-size:12px;color:var(--mut);padding:14px 2px 6px;font-weight:600;display:flex;justify-content:space-between}
+li.tx{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:2px 12px;align-items:center;padding:10px 12px;background:var(--card);border-radius:16px;margin-bottom:6px;box-shadow:var(--sh);cursor:pointer}
+.dot{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-weight:700;font-size:16px;color:#fff}
+.tx .t{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.tx .s{font-size:12px;color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tx .num{font-size:17px;text-align:right}.neg{color:var(--red)}.pos{color:var(--teal)}
+.acts{grid-column:1/-1;display:flex;gap:6px;flex-wrap:wrap;padding-top:8px}
+.acts button{min-height:38px;border:1px solid var(--rule);background:var(--sf);border-radius:10px;font-size:14px;padding:0 12px;cursor:pointer}
+.acts .ok{background:var(--teal);color:#fff;border:0}
+.pill{font-size:11px;border-radius:99px;padding:1px 8px;font-weight:700;margin-left:6px;vertical-align:1px}
+.pill.p{background:var(--wbg);color:var(--amb)}.pill.r{background:var(--rbg);color:var(--red)}.pill.t{background:var(--soft);color:var(--teal)}
+.hb{margin:0 0 12px}.hb .tr{height:8px;background:var(--soft);border-radius:99px;overflow:hidden;margin-top:5px}.hb .tr i{display:block;height:100%;border-radius:99px}
+.hb .m{color:var(--mut);font-size:12px}
+.cols{display:flex;align-items:flex-end;gap:6px;height:160px;padding-top:18px}
+.cols div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:6px;font-size:11px;color:var(--mut)}
+.cols i{display:block;width:100%;max-width:40px;background:var(--teal);border-radius:8px 8px 3px 3px;min-height:3px;opacity:.45}.cols .cur i{opacity:1}
+.days{display:flex;align-items:flex-end;gap:2px;height:90px}
+.days i{flex:1;background:var(--teal);opacity:.75;border-radius:3px 3px 0 0;min-height:2px}.days i.z{opacity:.15}.days i.td{background:var(--red);opacity:1}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kpis .card{padding:14px}.kpis .num{font-size:22px;display:block;margin:2px 0}.kpis span{font-size:12px;color:var(--mut)}
+.donut{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:center}
+.donut svg{width:150px;height:150px}
 .full{grid-column:1/-1}
-.invite .code{font-size:clamp(34px,8vw,48px);letter-spacing:.2em;color:var(--teal);margin:4px 0}
+.invite .code{font-size:clamp(32px,9vw,46px);letter-spacing:.18em;color:var(--teal);margin:2px 0 6px}
 .crow{display:flex;gap:6px;align-items:center;margin-bottom:8px}
-.crow input[type=text]{flex:1 1 0}.crow input.lim{flex:0 0 96px}
-.x{width:44px;height:44px;border:0;background:none;color:var(--mut);font-size:20px;border-radius:10px;cursor:pointer;flex:none}
-.sw{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--rule);color:var(--ink);font-size:15px}
-.empty{background:var(--card);border-radius:16px;padding:26px;text-align:center;color:var(--mut)}
+.crow input[type=text]{flex:1 1 0}.crow input.lim{flex:0 0 92px}
+.x{width:44px;height:44px;border:0;background:none;color:var(--mut);font-size:20px;border-radius:12px;cursor:pointer;flex:none}
+.sw{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.req{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;flex:none}
+.req .n{flex:1;font-weight:600}.req .n small{display:block;color:var(--mut);font-weight:400;font-size:12px}
+.goal{padding:14px 0;border-bottom:1px solid var(--rule)}.goal:last-child{border:0}
+.goal .tr{height:12px;background:var(--soft);border-radius:99px;overflow:hidden;margin:8px 0 6px}.goal .tr i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--teal),var(--teal2));transition:width .6s}
+.empty{background:var(--card);border-radius:20px;padding:26px;text-align:center;color:var(--mut);box-shadow:var(--sh)}
 .note{font-size:13px;color:var(--mut)}
-.center .note{color:inherit;opacity:.85}.box .note{color:var(--mut);opacity:1}
-#toast{position:fixed;left:50%;bottom:max(20px,env(safe-area-inset-bottom));transform:translateX(-50%) translateY(160px);background:var(--ink);color:var(--bg);padding:10px 10px 10px 18px;border-radius:12px;display:flex;gap:12px;align-items:center;transition:transform .25s;z-index:9;max-width:calc(100% - 32px)}
-#toast.on{transform:translateX(-50%)}#toast button{background:none;border:0;color:var(--bg);font:inherit;font-weight:700;text-decoration:underline;cursor:pointer;min-height:40px}
-dialog{border:0;border-radius:16px;padding:20px;background:var(--bg);color:var(--ink);width:min(560px,94vw)}dialog::backdrop{background:rgba(0,0,0,.45)}
-@media(max-width:860px){.hero,#p-rec,#p-sum,#p-adm,#p-me{grid-template-columns:minmax(0,1fr)}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+.key{font:600 18px ui-monospace,Menlo,monospace;letter-spacing:.08em;background:var(--soft);color:var(--teal);border-radius:12px;padding:12px;text-align:center;word-break:break-all}
+/* alt menü + ekle düğmesi */
+nav.bot{position:fixed;left:0;right:0;bottom:0;background:var(--sf);border-top:1px solid var(--rule);display:flex;justify-content:center;padding:6px 6px calc(6px + env(safe-area-inset-bottom));z-index:6;box-shadow:0 -6px 20px rgba(0,0,0,.05)}
+nav.bot .in{display:flex;width:min(640px,100%);justify-content:space-around}
+nav.bot button{flex:1;border:0;background:none;color:var(--mut);display:grid;justify-items:center;gap:2px;font-size:11px;font-weight:600;padding:6px 2px;min-height:54px;cursor:pointer;position:relative;border-radius:14px}
+nav.bot svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+nav.bot button[aria-selected=true]{color:var(--teal)}
+nav.bot button[aria-selected=true] svg{background:var(--soft);border-radius:10px;padding:2px 10px;width:44px;box-sizing:border-box;height:28px}
+nav.bot .bdg{position:absolute;top:4px;left:calc(50% + 6px);background:var(--red);color:#fff;border-radius:99px;font-size:10px;padding:0 6px;line-height:16px}
+.fab{position:fixed;right:max(18px,calc(50% - 530px));bottom:calc(84px + env(safe-area-inset-bottom));width:60px;height:60px;border-radius:20px;border:0;background:var(--teal);color:#fff;font-size:32px;font-weight:300;box-shadow:0 10px 24px rgba(11,93,99,.4);cursor:pointer;z-index:7;line-height:1}
+@media(prefers-color-scheme:dark){.fab{color:#06282b}}
+.fab:active{transform:scale(.95)}
+/* sayfa altı pencere */
+dialog{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;color:var(--ink)}
+dialog::backdrop{background:rgba(6,20,22,.5)}
+.sheet{position:fixed;left:0;right:0;bottom:0;margin:0 auto;width:min(560px,100%);background:var(--sf);border-radius:26px 26px 0 0;padding:10px 18px calc(18px + env(safe-area-inset-bottom));max-height:92vh;overflow-y:auto;animation:up .25s ease}
+@keyframes up{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
+.grab{width:42px;height:5px;border-radius:9px;background:var(--rule);margin:0 auto 12px}
+.sheet form{display:grid;gap:12px}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--soft);border-radius:14px;padding:4px}
+.seg button{height:42px;border:0;border-radius:11px;background:none;font-weight:700;cursor:pointer;color:var(--mut)}
+.seg button[aria-pressed=true]{background:var(--sf);color:var(--ink);box-shadow:var(--sh)}
+.seg button.e[aria-pressed=true]{color:var(--red)}.seg button.i[aria-pressed=true]{color:var(--teal)}
+.amt{font-family:"Libre Caslon Text",Georgia,serif;font-size:34px;min-height:64px;text-align:center;border:0;background:var(--soft)}
+.cats{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.cats button{flex:none;border:1.5px solid var(--rule);background:var(--sf);border-radius:99px;padding:8px 14px;font-size:14px;font-weight:600;cursor:pointer;display:flex;gap:6px;align-items:center;min-height:40px}
+.cats button i{width:10px;height:10px;border-radius:50%;display:block}
+.cats button[aria-pressed=true]{border-color:var(--ink);background:var(--ink);color:var(--sf)}
+#toast{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(200px);background:var(--ink);color:var(--sf);padding:10px 10px 10px 18px;border-radius:14px;display:flex;gap:12px;align-items:center;transition:transform .25s;z-index:20;max-width:calc(100% - 32px);font-size:14px}
+#toast.on{transform:translateX(-50%)}#toast button{background:none;border:0;color:var(--sf);font-weight:700;text-decoration:underline;cursor:pointer;min-height:40px}
+@media(max-width:820px){.hero,.grid2{grid-template-columns:minmax(0,1fr)}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.donut{grid-template-columns:minmax(0,1fr);justify-items:center}.donut>div{width:100%}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
-<link rel="manifest" href="manifest.json">
 </head>
 <body>
 
-<!-- Açılış -->
-<div id="splash" class="screen center"><div class="logo">₺</div><p>Yükleniyor…</p></div>
+<div id="splash" class="screen"><div class="box brand"><div class="logo">₺</div><h1>Bütçe Takip</h1><p id="splashMsg">Yükleniyor…</p></div></div>
 
-<!-- Kurulum eksik -->
-<div id="setup" class="screen center" hidden><div class="box"><div class="logo">₺</div><h2>Kurulum tamamlanmadı</h2><p class="note">www/firebase-config.js dosyasına kendi Firebase bilgilerini yapıştır. Adımlar KURULUM.md dosyasında.</p></div></div>
+<!-- PIN kilidi -->
+<div id="lock" class="screen" hidden><div class="box brand"><div class="logo">₺</div><h1>Bütçe Takip</h1><p id="lockMsg">PIN kodunu gir</p>
+ <div class="pin" id="pinDots"><i></i><i></i><i></i><i></i></div>
+ <div class="pad" id="pad"></div><button class="link" id="pinCancel" hidden>Vazgeç</button></div></div>
 
-<!-- Giriş / Kayıt -->
-<div id="auth" class="screen center" hidden>
- <form class="box" id="authF" autocomplete="on">
-  <div class="logo">₺</div>
-  <h2 id="authT">Giriş yap</h2>
-  <label id="nameL" hidden>Adın<input id="aName" autocomplete="name" maxlength="40"></label>
-  <label>E-posta<input id="aMail" type="email" autocomplete="email" required></label>
-  <label>Şifre<input id="aPass" type="password" autocomplete="current-password" minlength="6" required></label>
-  <div class="err" id="authErr" hidden></div>
-  <button class="go" id="authGo">Giriş yap</button>
-  <button type="button" class="link" id="authSwitch">Hesabın yok mu? Kayıt ol</button>
-  <button type="button" class="link" id="forgot">Şifremi unuttum</button>
- </form>
+<!-- Hoş geldin: grup kur / katıl -->
+<div id="welcome" class="screen" hidden>
+ <div class="box">
+  <div class="brand"><div class="logo">₺</div><h1>Bütçe Takip</h1><p>Ailenin ya da ekibinin harcamaları tek yerde</p></div>
+  <div class="seg2"><button id="wJoin" aria-pressed="true">Gruba katıl</button><button id="wCreate" aria-pressed="false">Grup kur</button></div>
+  <form class="panel" id="joinF">
+   <h2>Gruba katılma isteği gönder</h2>
+   <label>Adın<input id="jName" maxlength="30" required placeholder="Örn. Ayşe" autocomplete="given-name"></label>
+   <label>Grup kodu<input id="jCode" maxlength="8" required placeholder="Örn. K7Q2XM" autocapitalize="characters" style="text-transform:uppercase;letter-spacing:.15em"></label>
+   <div class="err" id="jErr" hidden></div>
+   <button class="go">İstek gönder</button>
+   <p class="note">Şifre veya e-posta gerekmez. Grubun yöneticisi isteğini onaylayınca uygulama açılır.</p>
+  </form>
+  <form class="panel" id="createF" hidden>
+   <h2>Yeni grup kur</h2>
+   <label>Adın<input id="cName" maxlength="30" required placeholder="Örn. Batur"></label>
+   <label>Grup adı<input id="gName" maxlength="40" required placeholder="Örn. Ev bütçesi"></label>
+   <div class="err" id="cErr" hidden></div>
+   <button class="go">Grubu kur, yönetici ol</button>
+   <p class="note">Grubu kuran kişi yönetici olur. Katılma isteklerini sen onaylarsın.</p>
+  </form>
+  <button class="link" id="wRecover" type="button">Yöneticiyim, kurtarma anahtarım var</button>
+  <form class="panel" id="recF" hidden>
+   <h2>Yöneticiliği geri al</h2>
+   <p class="note">Telefon değiştirdiysen ya da uygulama verileri silindiyse, grup kodu ve kurtarma anahtarınla yöneticiliği bu cihaza taşı.</p>
+   <label>Adın<input id="rName" maxlength="30" required></label>
+   <label>Grup kodu<input id="rCode" maxlength="8" required style="text-transform:uppercase;letter-spacing:.15em"></label>
+   <label>Kurtarma anahtarı<input id="rKey" maxlength="20" required style="text-transform:uppercase;letter-spacing:.08em"></label>
+   <div class="err" id="rErr" hidden></div>
+   <button class="go">Yöneticiliği al</button>
+  </form>
+ </div>
 </div>
 
-<!-- Grup oluştur / katıl -->
-<div id="onb" class="screen center" hidden>
- <div class="box">
-  <div class="logo">₺</div>
-  <h2>Hoş geldin<span id="onbName"></span></h2>
-  <p class="note">Bir bütçe grubu kur ve harcayanları davet et, ya da sana verilen davet koduyla bir gruba katıl.</p>
-  <form id="createF" class="sub"><h3>Yeni grup kur (yönetici olursun)</h3><label>Grup adı<input id="gName" placeholder="Örn. Ev bütçesi" maxlength="40" required></label><button class="go">Grubu kur</button></form>
-  <form id="joinF" class="sub"><h3>Gruba katıl</h3><label>Davet kodu<input id="jCode" placeholder="Örn. K7Q2XM" maxlength="8" autocapitalize="characters" required style="text-transform:uppercase;letter-spacing:.15em"></label><button class="go">Katıl</button></form>
-  <div class="err" id="onbErr" hidden></div>
-  <button type="button" class="link" data-logout>Çıkış yap</button>
+<!-- Onay bekleniyor -->
+<div id="waiting" class="screen" hidden>
+ <div class="box"><div class="brand"><div class="logo">₺</div><h1>Bütçe Takip</h1></div>
+  <div class="panel wait"><div class="spin"></div><h2 id="wTitle">İsteğin gönderildi</h2><p class="note" id="wText">Yönetici onayladığında uygulama kendiliğinden açılacak. Bu ekranı kapatabilirsin.</p><button class="ghost" id="wCancel">İsteği iptal et</button></div>
  </div>
 </div>
 
@@ -156,90 +218,107 @@ dialog{border:0;border-radius:16px;padding:20px;background:var(--bg);color:var(-
 <header>
  <div class="w">
   <div class="top">
-   <h1><span id="gTitle">Bütçe</span><span class="role" id="role"></span></h1>
+   <div class="gname"><span id="gTitle">Bütçe</span><span class="role" id="role"></span></div>
    <div class="month"><button class="ib" id="prev" aria-label="Önceki ay">‹</button><b id="mlabel"></b><button class="ib" id="next" aria-label="Sonraki ay">›</button></div>
   </div>
   <div class="hero">
    <div><div class="lbl" id="balLbl">Bu ayki bakiye</div><div class="bal num" id="bal">₺0</div>
-    <div class="pair"><div>Gelir<span class="num" id="inc">₺0</span></div><div>Gider<span class="num" id="exp">₺0</span></div><div id="pendBox" hidden>Onay bekleyen<span class="num" id="pend">₺0</span></div></div></div>
+    <div class="pair"><div class="chip in">Gelir<span class="num" id="inc">₺0</span></div><div class="chip out">Gider<span class="num" id="exp">₺0</span></div><div class="chip pd" id="pendBox" hidden>Onay bekleyen<span class="num" id="pend">₺0</span></div></div></div>
    <div class="bud" id="bud"></div>
   </div>
   <div class="ann" id="ann" hidden></div>
-  <div class="off" id="off" hidden>Çevrimdışısın. Kayıtlar internete bağlanınca gönderilecek.</div>
-  <div class="cmd"><input id="cmd" placeholder="Hızlı ekle: 250 market kahve  ·  komutlar: /" aria-label="Komut çubuğu" autocomplete="off" enterkeyhint="send"><div id="sug" role="listbox"></div></div>
-  <div class="tabs" role="tablist">
-   <button role="tab" data-t="rec" aria-selected="true">Kayıtlar</button>
-   <button role="tab" data-t="sum" aria-selected="false">Özet</button>
-   <button role="tab" data-t="adm" aria-selected="false" id="admTab" hidden>Yönetim<span class="bdg" id="admBdg" hidden></span></button>
-   <button role="tab" data-t="me" aria-selected="false">Hesap</button>
-  </div>
+  <div class="off" id="off" hidden>Çevrimdışısın. Kayıtların internete bağlanınca gönderilecek.</div>
+  <div class="cmd"><input id="cmd" placeholder="Hızlı ekle: 250 market  ·  komutlar: /" aria-label="Komut çubuğu" autocomplete="off" enterkeyhint="send"><div id="sug" role="listbox"></div></div>
  </div>
 </header>
 
 <main class="w">
  <section class="pane on" id="p-rec">
-  <div>
-   <h2 id="fTitle">Yeni kayıt</h2>
-   <div class="warn" id="lockMsg" hidden></div>
-   <form class="card" id="f" autocomplete="off">
-    <div class="seg" role="group" aria-label="Tür"><button type="button" id="tExp" aria-pressed="true">Gider</button><button type="button" id="tInc" aria-pressed="false">Gelir</button></div>
-    <label>Tutar (₺)<input class="amt" id="amt" inputmode="decimal" placeholder="0,00"></label>
-    <div class="two"><label>Kategori<select id="cat"></select></label><label>Tarih<input type="date" id="date"></label></div>
-    <div class="two"><label>Ödeme<select id="pm"></select></label><label>Not<input id="note" maxlength="80" placeholder="Örn. market"></label></div>
-    <div class="warn" id="catWarn" hidden></div>
-    <div class="btns"><button class="go" type="submit" id="save" style="flex:1">Kaydet</button><button class="ghost" type="button" id="cancelEdit" hidden>Vazgeç</button></div>
-   </form>
-  </div>
-  <div>
-   <h2>Hareketler</h2>
-   <div class="filters"><input type="search" id="q" placeholder="Ara…" aria-label="Ara"><select id="fCat" aria-label="Kategori filtresi"></select><select id="fWho" aria-label="Kişi filtresi" hidden></select></div>
-   <div id="list"></div>
-  </div>
+  <div class="warn" id="lockWarn" hidden>Yönetici yeni kayıtları geçici olarak kapattı.</div>
+  <div class="hrow"><h2>Hareketler</h2><span class="note" id="cnt"></span></div>
+  <div class="filters"><input type="search" id="q" placeholder="Ara…" aria-label="Ara"><select id="fCat" aria-label="Kategori"></select><select id="fWho" aria-label="Kişi" hidden></select></div>
+  <div id="list"></div>
  </section>
 
  <section class="pane" id="p-sum">
   <div class="kpis" id="kpis"></div>
-  <div class="card"><h3>Kategoriye göre gider</h3><div id="sCat"></div></div>
-  <div class="card"><h3 id="sWhoT">Kişiye göre gider</h3><div id="sWho"></div></div>
-  <div class="card"><h3>Son 6 ay gider</h3><div class="cols" id="sMon"></div></div>
-  <div class="card"><h3>Ödeme yöntemi</h3><div id="sPm"></div></div>
+  <div class="grid2">
+   <div class="card"><h3>Kategoriler</h3><div class="donut"><svg viewBox="0 0 42 42" id="donut" aria-hidden="true"></svg><div id="sCat"></div></div></div>
+   <div class="card"><h3>Bu ay günlük gider</h3><div class="days" id="sDays"></div><p class="note" id="sDaysN"></p></div>
+   <div class="card"><h3 id="sWhoT">Kişiye göre</h3><div id="sWho"></div></div>
+   <div class="card"><h3>Son 6 ay</h3><div class="cols" id="sMon"></div></div>
+   <div class="card"><h3>Ödeme yöntemi</h3><div id="sPm"></div></div>
+   <div class="card"><h3>En büyük 5 harcama</h3><div id="sTop"></div></div>
+  </div>
+ </section>
+
+ <section class="pane" id="p-goal">
+  <div class="hrow"><h2>Birikim hedefleri</h2><button class="ghost" id="addGoal">+ Hedef ekle</button></div>
+  <div class="card" id="goals"></div>
+  <div class="hrow"><h2>Düzenli ödemeler</h2><button class="ghost" id="addRec">+ Ekle</button></div>
+  <div class="card" id="recs"></div>
+  <p class="note">Düzenli ödemeler (kira, fatura, abonelik) her ay seçtiğin günde yönetici uygulamayı açtığında otomatik eklenir.</p>
  </section>
 
  <section class="pane" id="p-adm">
-  <div class="card full invite"><h3>Davet kodu</h3><div class="code num" id="code">——</div><p class="note">Harcayanlar uygulamayı açıp kayıt olduktan sonra bu kodla grubuna katılır.</p><div class="btns"><button class="go" id="shareCode">Kodu paylaş</button><button class="ghost" id="newCode">Yeni kod üret</button></div></div>
-  <div class="card full" id="pendCard"><h3>Onay bekleyenler</h3><div id="pendList"></div></div>
-  <div class="card"><h3>Genel ayarlar</h3>
-   <label>Grup adı<input id="aGName" maxlength="40"></label>
-   <label style="margin-top:12px">Aylık toplam harcama limiti (₺, 0 = yok)<input id="aLim" inputmode="decimal"></label>
-   <div class="sw">Harcamalar onayımdan geçsin<input type="checkbox" id="aAppr"></div>
-   <div class="sw">Yeni kayıtları kilitle<input type="checkbox" id="aLock"></div>
-   <label style="margin-top:12px">Herkese duyuru (boş = gizli)<textarea id="aNote" maxlength="200" placeholder="Örn. Bu ay tatil için tasarruf ediyoruz."></textarea></label>
-   <label style="margin-top:12px">Ödeme yöntemleri (virgülle)<input id="aPm"></label>
-  </div>
-  <div class="card"><h3>Kişiler</h3><div id="aPeople"></div></div>
-  <div class="card"><h3>Gider kategorileri</h3><div id="aExp"></div><button class="ghost" id="addExp">+ Kategori ekle</button></div>
-  <div class="card"><h3>Gelir kategorileri</h3><div id="aInc"></div><button class="ghost" id="addInc">+ Kategori ekle</button></div>
-  <div class="card full"><h3>Dışa aktar</h3>
-   <div class="btns"><button class="ghost" id="csvM">Bu ayı CSV olarak dışa aktar</button><button class="ghost" id="csvA">Tümünü CSV olarak dışa aktar</button></div>
-   <p class="note">CSV dosyası Excel ve Google E-Tablolar'da açılır.</p>
+  <div class="card" id="reqCard"><h3>Katılma istekleri</h3><div id="reqs"></div></div>
+  <div class="card" id="pendCard"><h3>Onay bekleyen harcamalar</h3><div id="pendList"></div></div>
+  <div class="grid2">
+   <div class="card invite"><h3>Grup kodu</h3><div class="code num" id="code">——</div><p class="note">Bu kodu ya da davet bağlantısını paylaş. Gelen istekler yukarıda görünür.</p><div class="btns"><button class="go" id="shareCode">Davet gönder</button><button class="ghost" id="newCode">Yeni kod</button></div></div>
+   <div class="card"><h3>Kişiler</h3><div id="aPeople"></div></div>
+   <div class="card"><h3>Genel ayarlar</h3>
+    <label>Grup adı<input id="aGName" maxlength="40"></label>
+    <label style="margin-top:10px">Aylık toplam harcama limiti (₺, 0 = yok)<input id="aLim" inputmode="decimal"></label>
+    <div class="sw">Harcamalar onayımdan geçsin<input type="checkbox" id="aAppr"></div>
+    <div class="sw">Yeni kayıtları kilitle<input type="checkbox" id="aLock"></div>
+    <label style="margin-top:10px">Herkese duyuru (boş = gizli)<textarea id="aNote" maxlength="200" placeholder="Örn. Bu ay tatil için tasarruf ediyoruz."></textarea></label>
+    <label style="margin-top:10px">Ödeme yöntemleri (virgülle)<input id="aPm"></label>
+   </div>
+   <div class="card"><h3>Gider kategorileri</h3><div id="aExp"></div><button class="ghost" id="addExp">+ Kategori</button>
+    <h3 style="margin-top:18px">Gelir kategorileri</h3><div id="aInc"></div><button class="ghost" id="addInc">+ Kategori</button></div>
+   <div class="card full"><h3>Dışa aktar</h3><div class="btns"><button class="ghost" id="csvM">Bu ayı CSV indir</button><button class="ghost" id="csvA">Tümünü CSV indir</button></div><p class="note" style="margin-top:8px">CSV dosyası Excel ve Google E-Tablolar'da açılır.</p></div>
   </div>
  </section>
 
  <section class="pane" id="p-me">
-  <div class="card"><h3>Hesabım</h3><p><b id="meName"></b><br><span class="note" id="meMail"></span></p>
-   <label>Görünen adım<input id="meNameIn" maxlength="40"></label>
-   <div class="btns" style="margin-top:12px"><button class="ghost" id="resetPw">Şifre sıfırlama e-postası gönder</button><button class="ghost" data-logout>Çıkış yap</button></div></div>
-  <div class="card"><h3>Grup</h3><p id="meGroup"></p><button class="ghost" id="leave">Gruptan ayrıl</button>
-   <p class="note">Telefonda ana ekrana eklemek için: iPhone'da Safari → Paylaş → Ana Ekrana Ekle; Android'de Chrome → ⋮ → Uygulamayı yükle.</p><button class="go" id="install" hidden>Uygulamayı yükle</button></div>
+  <div class="grid2">
+   <div class="card"><h3>Profilim</h3><label>Görünen adım<input id="meName" maxlength="30"></label><p class="note" id="meRole" style="margin-top:10px"></p></div>
+   <div class="card"><h3>PIN kilidi</h3><p class="note" id="pinState"></p><div class="btns" style="margin-top:10px"><button class="ghost" id="pinSet">PIN belirle</button><button class="ghost" id="pinOff" hidden>PIN'i kaldır</button></div></div>
+   <div class="card" id="keyCard" hidden><h3>Yönetici kurtarma anahtarı</h3><p class="note">Telefonunu değiştirirsen ya da uygulama verileri silinirse yöneticiliği geri almak için bu anahtar ve grup kodu gerekir. Ekran görüntüsünü al ya da bir yere yaz, kimseyle paylaşma.</p><div class="key" id="keyVal">••••</div><div class="btns" style="margin-top:10px"><button class="ghost" id="keyShow">Göster</button><button class="ghost" id="keyNew">Yenile</button></div></div>
+   <div class="card"><h3>Uygulama</h3><p class="note">Ana ekrana eklemek için Android'de Chrome → ⋮ → Ana ekrana ekle → Yükle; iPhone'da Safari → Paylaş → Ana Ekrana Ekle.</p><div class="btns" style="margin-top:10px"><button class="go" id="install" hidden>Uygulamayı yükle</button><button class="ghost" id="help">Komutlar</button></div></div>
+   <div class="card"><h3>Grup</h3><p id="meGroup"></p><button class="ghost danger" id="leave">Gruptan ayrıl</button></div>
+  </div>
  </section>
 </main>
+
+<button class="fab" id="fab" aria-label="Yeni kayıt">+</button>
+<nav class="bot"><div class="in">
+ <button data-t="rec" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Kayıtlar</button>
+ <button data-t="sum" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Özet</button>
+ <button data-t="goal" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>Hedefler</button>
+ <button data-t="adm" aria-selected="false" id="admTab" hidden><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>Yönetim<span class="bdg" id="admBdg" hidden></span></button>
+ <button data-t="me" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>Hesap</button>
+</div></nav>
 </div>
 
-<dialog id="dlg"><h3 id="dT"></h3><div id="dB"></div><div class="btns" style="justify-content:flex-end;margin-top:14px" id="dBtns"></div></dialog>
+<!-- Kayıt ekleme penceresi -->
+<dialog id="addDlg"><div class="sheet"><div class="grab"></div>
+ <form id="f" autocomplete="off">
+  <div class="hrow"><h2 id="fTitle">Yeni kayıt</h2><button type="button" class="x" data-close aria-label="Kapat">×</button></div>
+  <div class="seg" role="group" aria-label="Tür"><button type="button" class="e" id="tExp" aria-pressed="true">Gider</button><button type="button" class="i" id="tInc" aria-pressed="false">Gelir</button></div>
+  <input class="amt" id="amt" inputmode="decimal" placeholder="₺0" aria-label="Tutar">
+  <div class="cats" id="catChips"></div>
+  <div class="two"><label>Tarih<input type="date" id="date"></label><label>Ödeme<select id="pm"></select></label></div>
+  <label>Not<input id="note" maxlength="80" placeholder="Örn. haftalık market"></label>
+  <div class="warn" id="catWarn" hidden></div>
+  <button class="go" type="submit" id="save">Kaydet</button>
+ </form>
+</div></dialog>
+
+<dialog id="dlg"><div class="sheet"><div class="grab"></div><div class="hrow"><h2 id="dT"></h2><button type="button" class="x" data-close aria-label="Kapat">×</button></div><div id="dB" style="margin-top:10px"></div><div class="btns" style="justify-content:flex-end;margin-top:14px" id="dBtns"></div></div></dialog>
 <div id="toast" role="status"><span id="tmsg"></span><button id="undo">Geri al</button></div>
 
-<script type="module">
-// Bütçe Takip — bağımsız uygulama (Firebase Auth + Firestore)
+<script type="module">// Bütçe Takip v3 — istekle katılma, onay, hedefler, düzenli ödemeler, PIN
 const firebaseConfig = {
   apiKey: "AIzaSyBY1aWcAtBIgFM088TunWyawjMhy1BlvrI",
   authDomain: "butce-takip-5694f.firebaseapp.com",
@@ -248,23 +327,25 @@ const firebaseConfig = {
   messagingSenderId: "829416333826",
   appId: "1:829416333826:web:5c842995a06fd8cb927d1b"
 };
-
 const V = "10.14.1";
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const fmt = n => "₺" + Math.abs(n).toLocaleString("tr-TR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const fmt0 = n => "₺" + Math.round(Math.abs(n)).toLocaleString("tr-TR");
 const sfmt = n => (n < 0 ? "−" : "") + fmt(n);
 const low = s => String(s).toLocaleLowerCase("tr");
-const num = s => { s = String(s).trim().replace(/\s/g, ""); if (/,\d{1,2}$/.test(s)) s = s.replace(/\./g, "").replace(",", "."); else s = s.replace(/,/g, ""); const v = parseFloat(s); return isFinite(v) ? v : NaN; };
+const num = s => { s = String(s).trim().replace(/[\s₺]/g, ""); if (/,\d{1,2}$/.test(s)) s = s.replace(/\./g, "").replace(",", "."); else s = s.replace(/,/g, ""); const v = parseFloat(s); return isFinite(v) ? v : NaN; };
 const today = () => { const d = new Date(); d.setMinutes(d.getMinutes() - d.getTimezoneOffset()); return d.toISOString().slice(0, 10); };
 const ym = d => d.slice(0, 7);
+const rnd = (n, a = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789") => { let s = ""; for (const x of crypto.getRandomValues(new Uint32Array(n))) s += a[x % a.length]; return s; };
 const PAL = ["#0b5d63", "#7a4a8c", "#c07a12", "#b3412a", "#2f6db5", "#a8336b", "#5b7d2a", "#6b7178", "#1f8a70", "#8c5a2b"];
 const DEF = {
   cats: {
     exp: [["Market", 0], ["Kira & Fatura", 1], ["Ulaşım", 2], ["Yeme-İçme", 3], ["Sağlık", 4], ["Eğlence", 5], ["Giyim", 6], ["Diğer", 7]].map(([n, i]) => ({ n, c: PAL[i], lim: 0 })),
     inc: [["Maaş", 0], ["Ek gelir", 4], ["Hediye", 5], ["Diğer", 7]].map(([n, i]) => ({ n, c: PAL[i], lim: 0 }))
-  }, limit: 0, approval: false, locked: false, note: "", nick: {}, plim: {}, pms: ["Nakit", "Kart", "Havale"]
+  }, limit: 0, approval: false, locked: false, note: "", nick: {}, plim: {}, pms: ["Nakit", "Kart", "Havale"], goals: [], rec: []
 };
+const LS = { get(k) { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { } }, del(k) { try { localStorage.removeItem(k); } catch (e) { } } };
 
 function normCfg(d) {
   d = d && typeof d === "object" ? d : {}; const o = JSON.parse(JSON.stringify(DEF));
@@ -273,21 +354,25 @@ function normCfg(d) {
   if (d.nick && typeof d.nick === "object") for (const k in d.nick) o.nick[k] = String(d.nick[k]).slice(0, 30);
   if (d.plim && typeof d.plim === "object") for (const k in d.plim) if (Number(d.plim[k]) > 0) o.plim[k] = Number(d.plim[k]);
   if (Array.isArray(d.pms) && d.pms.length) o.pms = d.pms.map(x => String(x).slice(0, 20)).filter(Boolean).slice(0, 10);
+  if (Array.isArray(d.goals)) o.goals = d.goals.filter(g => g && g.n).slice(0, 30).map(g => ({ id: String(g.id || rnd(8)), n: String(g.n).slice(0, 40), target: Number(g.target) > 0 ? Number(g.target) : 0, saved: Number(g.saved) || 0, c: /^#[0-9a-f]{6}$/i.test(g.c) ? g.c : PAL[0] }));
+  if (Array.isArray(d.rec)) o.rec = d.rec.filter(r => r && Number(r.amt) > 0).slice(0, 40).map(r => ({ id: String(r.id || rnd(8)), type: r.type === "inc" ? "inc" : "exp", cat: String(r.cat || "Diğer").slice(0, 30), amt: Number(r.amt), day: Math.min(28, Math.max(1, parseInt(r.day) || 1)), note: String(r.note || "").slice(0, 80), pm: String(r.pm || "").slice(0, 20), last: /^\d{4}-\d\d$/.test(r.last) ? r.last : "" }));
   return o;
 }
 function normItem(id, d) {
   if (!d || !(Number(d.amt) > 0)) return null;
-  return { id, uid: String(d.uid || ""), type: d.type === "inc" ? "inc" : "exp", cat: String(d.cat || "Diğer").slice(0, 30), amt: Math.round(Number(d.amt) * 100) / 100, date: /^\d{4}-\d\d-\d\d$/.test(d.date) ? d.date : today(), note: String(d.note || "").slice(0, 80), pm: String(d.pm || "").slice(0, 20), status: ["ok", "pending", "rejected"].includes(d.status) ? d.status : "ok", ts: Number(d.ts) || 0 };
+  return { id, uid: String(d.uid || ""), by: String(d.by || "").slice(0, 30), type: d.type === "inc" ? "inc" : "exp", cat: String(d.cat || "Diğer").slice(0, 30), amt: Math.round(Number(d.amt) * 100) / 100, date: /^\d{4}-\d\d-\d\d$/.test(d.date) ? d.date : today(), note: String(d.note || "").slice(0, 80), pm: String(d.pm || "").slice(0, 20), status: ["ok", "pending", "rejected"].includes(d.status) ? d.status : "ok", ts: Number(d.ts) || 0, auto: !!d.auto };
 }
 
 /* ---------- durum ---------- */
-let F = {}, auth, db, me = null, gid = null, group = null, cfg = normCfg(null), owner = false;
-let items = new Map(), members = {}, type = "exp", cur = today().slice(0, 7), tab = "rec", editId = null, lastDel = null;
-let unsub = [];
-const show = id => { for (const s of ["splash", "setup", "auth", "onb", "app"]) $(s).hidden = s !== id; };
+let F = {}, auth, db, me = null, gid = null, group = null, cfg = normCfg(null), owner = false, myName = "";
+let items = new Map(), members = {}, requests = [], type = "exp", cur = today().slice(0, 7), tab = "rec", editId = null, openId = null, lastDel = null, selCat = "";
+let unsub = [], dataUnsub = [], recDone = false;
+const SCREENS = ["splash", "lock", "welcome", "waiting", "app"];
+const show = id => { for (const s of SCREENS) $(s).hidden = s !== id; window.scrollTo(0, 0); };
 const catOf = (t, n) => cfg.cats[t].find(c => c.n === n);
 const col = (t, n) => (catOf(t, n) || {}).c || "#6b7178";
-const who = uid => cfg.nick[uid] || (members[uid] && members[uid].name) || (uid === me?.uid ? "Ben" : "Eski üye");
+const who = (uid, by) => cfg.nick[uid] || (members[uid] && members[uid].name) || by || (uid === me?.uid ? myName || "Ben" : "Eski üye");
+const avc = s => PAL[[...String(s)].reduce((a, c) => a + c.charCodeAt(0), 0) % PAL.length];
 const all = () => [...items.values()];
 const inMonth = (m, arr = all()) => arr.filter(t => ym(t.date) === m);
 function sums(arr) { let inc = 0, exp = 0, pend = 0; for (const t of arr) { if (t.status === "ok") { if (t.type === "inc") inc += t.amt; else exp += t.amt; } else if (t.status === "pending" && t.type === "exp") pend += t.amt; } return { inc, exp, pend, bal: inc - exp }; }
@@ -296,17 +381,32 @@ function shiftM(m, n) { const [y, mo] = m.split("-").map(Number); const d = new 
 const canEditItem = t => owner || (t.uid === me.uid && !cfg.locked && !(cfg.approval && t.status === "ok"));
 function errMsg(e) {
   const c = e && e.code || "";
-  return ({
-    "auth/invalid-credential": "E-posta veya şifre hatalı.", "auth/wrong-password": "E-posta veya şifre hatalı.", "auth/user-not-found": "Bu e-postayla hesap yok.",
-    "auth/email-already-in-use": "Bu e-posta zaten kayıtlı. Giriş yapmayı dene.", "auth/weak-password": "Şifre en az 6 karakter olmalı.", "auth/invalid-email": "E-posta adresi geçersiz.",
-    "auth/too-many-requests": "Çok fazla deneme. Biraz bekleyip tekrar dene.", "auth/network-request-failed": "İnternet bağlantısı yok.",
-    "permission-denied": "Bu işlem için yetkin yok."
-  })[c] || "Bir hata oluştu" + (c ? " (" + c + ")" : "") + ".";
+  if (c === "auth/operation-not-allowed" || c === "auth/admin-restricted-operation") return "Firebase'de Anonymous (anonim) giriş kapalı. Authentication → Sign-in method → Anonymous'u aç.";
+  return ({ "permission-denied": "Bu işlem için yetkin yok.", "auth/network-request-failed": "İnternet bağlantısı yok.", "unavailable": "Sunucuya ulaşılamıyor, internetini kontrol et." })[c] || "Bir hata oluştu" + (c ? " (" + c + ")" : "") + ".";
 }
+const D = (...p) => F.doc(db, ...p);
+const C = (...p) => F.collection(db, ...p);
+
+/* ---------- PIN ---------- */
+async function sha(s) { const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode("butce:" + s)); return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, "0")).join(""); }
+let pinBuf = "", pinRes = null, pinMode = null, pinFirst = "";
+function drawPin() { [...$("pinDots").children].forEach((d, i) => d.classList.toggle("f", i < pinBuf.length)); }
+$("pad").innerHTML = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "", "0", "⌫"].map(k => k ? `<button type="button" data-k="${k}" aria-label="${k === "⌫" ? "Sil" : k}">${k}</button>` : "<span></span>").join("");
+$("pad").addEventListener("click", async e => {
+  const b = e.target.closest("[data-k]"); if (!b) return; const k = b.dataset.k;
+  if (k === "⌫") pinBuf = pinBuf.slice(0, -1); else if (pinBuf.length < 4) pinBuf += k; drawPin();
+  if (pinBuf.length < 4) return;
+  const v = pinBuf; pinBuf = ""; setTimeout(drawPin, 150);
+  if (pinMode === "unlock") { if (await sha(v) === LS.get("butce-pin")) { const r = pinRes; pinRes = null; r && r(); } else { $("lockMsg").textContent = "PIN yanlış, tekrar dene"; navigator.vibrate && navigator.vibrate(120); } }
+  else if (pinMode === "set1") { pinFirst = v; pinMode = "set2"; $("lockMsg").textContent = "PIN'i tekrar gir"; }
+  else if (pinMode === "set2") { if (v === pinFirst) { LS.set("butce-pin", await sha(v)); toast("PIN kilidi açıldı."); } else toast("PIN'ler aynı değil, tekrar dene."); $("pinCancel").hidden = true; show("app"); renderMe(); }
+});
+function unlock() { if (!LS.get("butce-pin")) return Promise.resolve(); $("pinCancel").hidden = true; pinMode = "unlock"; pinBuf = ""; drawPin(); $("lockMsg").textContent = "PIN kodunu gir"; const prev = SCREENS.find(s => !$(s).hidden); show("lock"); return new Promise(r => { pinRes = () => { show(prev && prev !== "lock" ? prev : "app"); r(); }; }); }
+let hiddenAt = 0;
+document.addEventListener("visibilitychange", () => { if (document.hidden) hiddenAt = Date.now(); else if (hiddenAt && Date.now() - hiddenAt > 120000 && LS.get("butce-pin") && !$("app").hidden) unlock(); });
 
 /* ---------- açılış ---------- */
 async function boot() {
-  if (!firebaseConfig || !firebaseConfig.apiKey || String(firebaseConfig.apiKey).includes("BURAYA")) { show("setup"); return; }
   const [appM, authM, fsM] = await Promise.all([
     import(`https://www.gstatic.com/firebasejs/${V}/firebase-app.js`),
     import(`https://www.gstatic.com/firebasejs/${V}/firebase-auth.js`),
@@ -315,241 +415,314 @@ async function boot() {
   F = { ...authM, ...fsM };
   const app = appM.initializeApp(firebaseConfig);
   auth = authM.initializeAuth(app, { persistence: [authM.indexedDBLocalPersistence, authM.browserLocalPersistence] });
-  try { db = fsM.initializeFirestore(app, { localCache: fsM.persistentLocalCache({ tabManager: fsM.persistentMultipleTabManager() }) }); }
-  catch (e) { db = fsM.getFirestore(app); }
-  authM.onAuthStateChanged(auth, u => { stopAll(); me = u; if (!u) { setAuthMode(false); $("aPass").value = ""; show("auth"); return; } loadUser(); });
+  try { db = fsM.initializeFirestore(app, { localCache: fsM.persistentLocalCache({ tabManager: fsM.persistentMultipleTabManager() }) }); } catch (e) { db = fsM.getFirestore(app); }
+  await unlock();
+  authM.onAuthStateChanged(auth, u => {
+    if (!u) { F.signInAnonymously(auth).catch(err => { $("splashMsg").textContent = errMsg(err); show("splash"); }); return; }
+    me = u; route();
+  });
 }
-boot().catch(e => { console.error(e); $("splash").querySelector("p").textContent = "Bağlanılamadı. İnternet bağlantını kontrol edip uygulamayı yeniden aç."; });
+boot().catch(e => { console.error(e); $("splashMsg").textContent = "Bağlanılamadı. İnternetini kontrol edip uygulamayı yeniden aç."; });
 
-function stopAll() { $("cmd").value = ""; $("q").value = ""; editId = null; tab = "rec"; unsub.forEach(f => { try { f(); } catch (e) { } }); unsub = []; items = new Map(); members = {}; group = null; gid = null; owner = false; }
+function stopAll() { unsub.forEach(f => { try { f(); } catch (e) { } }); unsub = []; dataUnsub.forEach(f => { try { f(); } catch (e) { } }); dataUnsub = []; items = new Map(); members = {}; requests = []; group = null; gid = null; owner = false; recDone = false; editId = null; openId = null; tab = "rec"; $("cmd").value = ""; $("q").value = ""; }
 
-/* ---------- giriş / kayıt ---------- */
-let reg = false;
-function setAuthMode(r) { reg = r; $("authT").textContent = r ? "Hesap oluştur" : "Giriş yap"; $("authGo").textContent = r ? "Kayıt ol" : "Giriş yap"; $("nameL").hidden = !r; $("aName").required = r; $("authSwitch").textContent = r ? "Zaten hesabın var mı? Giriş yap" : "Hesabın yok mu? Kayıt ol"; $("aPass").autocomplete = r ? "new-password" : "current-password"; $("authErr").hidden = true; }
-$("authSwitch").onclick = () => setAuthMode(!reg);
-$("authF").addEventListener("submit", async e => {
-  e.preventDefault(); const mail = $("aMail").value.trim(), pass = $("aPass").value; $("authGo").disabled = true; $("authErr").hidden = true;
+async function route() {
+  stopAll(); show("splash");
+  let u = {}; try { const s = await F.getDoc(D("users", me.uid)); u = s.exists() ? s.data() : {}; } catch (e) { u = LS.get("butce-user") || {}; }
+  myName = String(u.name || "").slice(0, 30);
+  const g = u.gid;
+  if (!g) return showWelcome();
   try {
-    if (reg) { const name = $("aName").value.trim(); const c = await F.createUserWithEmailAndPassword(auth, mail, pass); await F.updateProfile(c.user, { displayName: name }); await F.setDoc(F.doc(db, "users", c.user.uid), { name, gid: null }, { merge: true }); }
-    else await F.signInWithEmailAndPassword(auth, mail, pass);
-  } catch (err) { $("authErr").textContent = errMsg(err); $("authErr").hidden = false; }
-  $("authGo").disabled = false;
-});
-$("forgot").onclick = async () => { const mail = $("aMail").value.trim(); if (!mail) { $("authErr").textContent = "Önce e-posta adresini yaz."; $("authErr").hidden = false; return; } try { await F.sendPasswordResetEmail(auth, mail); $("authErr").textContent = "Şifre sıfırlama bağlantısı e-postana gönderildi."; } catch (err) { $("authErr").textContent = errMsg(err); } $("authErr").hidden = false; };
-document.addEventListener("click", e => { if (e.target.closest("[data-logout]")) F.signOut(auth); });
-
-/* ---------- kullanıcı / grup ---------- */
-let userDoc = {};
-async function loadUser() {
-  show("splash");
-  try { const s = await F.getDoc(F.doc(db, "users", me.uid)); userDoc = s.exists() ? s.data() : {}; } catch (e) { userDoc = {}; }
-  if (!userDoc.name) userDoc.name = me.displayName || (me.email || "").split("@")[0];
-  if (userDoc.gid) openGroup(userDoc.gid); else showOnb();
+    const m = await F.getDoc(D("groups", g, "members", me.uid));
+    if (m.exists()) { myName = String(m.data().name || myName); return openGroup(g); }
+    const r = await F.getDoc(D("groups", g, "requests", me.uid));
+    if (r.exists() && r.data().status === "pending") return showWaiting(g);
+    if (r.exists() && r.data().status === "rejected") return showWelcome("Katılma isteğin reddedildi.");
+    return showWelcome(u.was ? "Bu gruptan çıkarıldın. Yeni bir istek gönderebilirsin." : "");
+  } catch (e) { if (LS.get("butce-member") === g) return openGroup(g); showWelcome(errMsg(e)); }
 }
-function showOnb(msg) { $("onbName").textContent = userDoc.name ? ", " + userDoc.name : ""; $("onbErr").hidden = !msg; $("onbErr").textContent = msg || ""; show("onb"); }
-const makeCode = () => { const a = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; let s = ""; const r = crypto.getRandomValues(new Uint32Array(6)); for (const x of r) s += a[x % a.length]; return s; };
 
-$("createF").addEventListener("submit", async e => {
-  e.preventDefault(); const btn = e.submitter || e.target.querySelector("button"); btn.disabled = true;
-  try {
-    const gRef = F.doc(F.collection(db, "groups")); const code = makeCode(); const b = F.writeBatch(db);
-    b.set(gRef, { name: $("gName").value.trim().slice(0, 40), owner: me.uid, code, cfg: JSON.parse(JSON.stringify(DEF)), created: Date.now() });
-    b.set(F.doc(db, "codes", code), { gid: gRef.id });
-    b.set(F.doc(db, "groups", gRef.id, "members", me.uid), { name: userDoc.name, code, joined: Date.now() });
-    b.set(F.doc(db, "users", me.uid), { name: userDoc.name, gid: gRef.id }, { merge: true });
-    await b.commit(); openGroup(gRef.id);
-  } catch (err) { showOnb(errMsg(err)); }
-  btn.disabled = false;
-});
+/* ---------- hoş geldin ---------- */
+function wMode(m) { $("wJoin").setAttribute("aria-pressed", m === "join"); $("wCreate").setAttribute("aria-pressed", m === "create"); $("joinF").hidden = m !== "join"; $("createF").hidden = m !== "create"; $("recF").hidden = m !== "rec"; for (const e of ["jErr", "cErr", "rErr"]) $(e).hidden = true; }
+$("wJoin").onclick = () => wMode("join"); $("wCreate").onclick = () => wMode("create"); $("wRecover").onclick = () => wMode($("recF").hidden ? "rec" : "join");
+function showWelcome(msg) {
+  stopAll(); const h = (location.hash.match(/katil-([A-Za-z0-9]{4,8})/) || [])[1];
+  wMode("join"); if (h) $("jCode").value = h.toUpperCase();
+  for (const i of ["jName", "cName", "rName"]) if (!$(i).value) $(i).value = myName;
+  if (msg) { $("jErr").textContent = msg; $("jErr").hidden = false; }
+  show("welcome");
+}
+const cleanCode = v => String(v).trim().toUpperCase().replace(/[^A-Z0-9]/g, "");
+async function codeToGid(code) { const c = await F.getDoc(D("codes", code)); return c.exists() ? String(c.data().gid) : null; }
+function busy(form, on) { for (const b of form.querySelectorAll("button")) b.disabled = on; }
 $("joinF").addEventListener("submit", async e => {
-  e.preventDefault(); const btn = e.submitter || e.target.querySelector("button"); btn.disabled = true;
-  const code = $("jCode").value.trim().toUpperCase().replace(/[^A-Z0-9]/g, "");
+  e.preventDefault(); const f = e.target; busy(f, true); $("jErr").hidden = true;
+  const name = $("jName").value.trim().slice(0, 30), code = cleanCode($("jCode").value);
   try {
-    const c = await F.getDoc(F.doc(db, "codes", code)); if (!c.exists()) { showOnb("Bu davet kodu geçersiz. Yöneticiden güncel kodu iste."); btn.disabled = false; return; }
-    const g = c.data().gid;
-    await F.setDoc(F.doc(db, "groups", g, "members", me.uid), { name: userDoc.name, code, joined: Date.now() });
-    await F.setDoc(F.doc(db, "users", me.uid), { name: userDoc.name, gid: g }, { merge: true });
-    openGroup(g);
-  } catch (err) { showOnb(errMsg(err)); }
-  btn.disabled = false;
+    const g = await codeToGid(code); if (!g) throw { code: "x-code" };
+    try { await F.deleteDoc(D("groups", g, "requests", me.uid)); } catch (e) { }
+    await F.setDoc(D("groups", g, "requests", me.uid), { name, code, status: "pending", ts: Date.now() });
+    await F.setDoc(D("users", me.uid), { name, gid: g }, { merge: true }); LS.set("butce-user", { name, gid: g });
+    myName = name; showWaiting(g);
+  } catch (err) { $("jErr").textContent = err.code === "x-code" ? "Bu grup kodu bulunamadı. Yöneticiden güncel kodu iste." : errMsg(err); $("jErr").hidden = false; }
+  busy(f, false);
+});
+$("createF").addEventListener("submit", async e => {
+  e.preventDefault(); const f = e.target; busy(f, true); $("cErr").hidden = true;
+  const name = $("cName").value.trim().slice(0, 30);
+  try {
+    const ref = F.doc(C("groups")), code = rnd(6), key = rnd(12), b = F.writeBatch(db);
+    b.set(ref, { name: $("gName").value.trim().slice(0, 40), owner: me.uid, code, cfg: JSON.parse(JSON.stringify(DEF)), created: Date.now() });
+    b.set(D("codes", code), { gid: ref.id });
+    b.set(D("groups", ref.id, "members", me.uid), { name, joined: Date.now() });
+    b.set(D("groups", ref.id, "secret", "key"), { key });
+    b.set(D("users", me.uid), { name, gid: ref.id }, { merge: true });
+    await b.commit(); myName = name; LS.set("butce-user", { name, gid: ref.id });
+    openGroup(ref.id);
+    setTimeout(() => showKey(key, true), 600);
+  } catch (err) { $("cErr").textContent = errMsg(err); $("cErr").hidden = false; }
+  busy(f, false);
+});
+$("recF").addEventListener("submit", async e => {
+  e.preventDefault(); const f = e.target; busy(f, true); $("rErr").hidden = true;
+  const name = $("rName").value.trim().slice(0, 30), code = cleanCode($("rCode").value), key = cleanCode($("rKey").value);
+  try {
+    const g = await codeToGid(code); if (!g) throw { code: "x-code" };
+    try { await F.updateDoc(D("groups", g), { owner: me.uid, claim: key }); } catch (err) { throw { code: "x-key" }; }
+    await F.setDoc(D("groups", g, "members", me.uid), { name, joined: Date.now() });
+    const nk = rnd(12); await F.setDoc(D("groups", g, "secret", "key"), { key: nk });
+    await F.updateDoc(D("groups", g), { claim: F.deleteField() });
+    await F.setDoc(D("users", me.uid), { name, gid: g }, { merge: true }); myName = name;
+    openGroup(g); setTimeout(() => showKey(nk, true, "Yöneticilik bu cihaza taşındı. Eski anahtar artık geçersiz; yenisini sakla:"), 600);
+  } catch (err) { $("rErr").textContent = err.code === "x-code" ? "Grup kodu bulunamadı." : err.code === "x-key" ? "Kurtarma anahtarı yanlış." : errMsg(err); $("rErr").hidden = false; }
+  busy(f, false);
 });
 
+/* ---------- onay bekleme ---------- */
+function showWaiting(g) {
+  stopAll(); gid = null; $("wTitle").textContent = "İsteğin gönderildi"; $("wText").textContent = "Yönetici onayladığında uygulama kendiliğinden açılacak. Bu ekranı kapatıp sonra tekrar açabilirsin.";
+  show("waiting");
+  unsub.push(F.onSnapshot(D("groups", g, "members", me.uid), s => { if (s.exists()) { toast("İsteğin onaylandı, hoş geldin!"); openGroup(g); } }, () => { }));
+  unsub.push(F.onSnapshot(D("groups", g, "requests", me.uid), s => {
+    if (s.exists() && s.data().status === "rejected") showWelcome("Katılma isteğin reddedildi.");
+    else if (!s.exists()) setTimeout(async () => { try { const m = await F.getDoc(D("groups", g, "members", me.uid)); if (!m.exists() && !$("waiting").hidden) showWelcome("İsteğin kaldırıldı."); } catch (e) { } }, 2500);
+  }, () => { }));
+  $("wCancel").onclick = async () => { try { await F.deleteDoc(D("groups", g, "requests", me.uid)); await F.setDoc(D("users", me.uid), { gid: null }, { merge: true }); } catch (e) { } showWelcome(); };
+}
+
+/* ---------- grup ---------- */
 function openGroup(g) {
-  gid = g; let first = true;
-  unsub.push(F.onSnapshot(F.doc(db, "groups", gid), s => {
+  stopAll(); gid = g; LS.set("butce-member", g); let first = true;
+  unsub.push(F.onSnapshot(D("groups", gid), s => {
     if (!s.exists()) { leaveLocal("Grup silinmiş."); return; }
-    group = s.data(); cfg = normCfg(group.cfg); const wasOwner = owner; owner = group.owner === me.uid;
-    if (first || wasOwner !== owner) { first = false; startData(); show("app"); showTab(); }
-    lastFormSig = ""; render();
-  }, err => { leaveLocal(err.code === "permission-denied" ? "Bu gruba erişimin kaldırılmış. Yeni bir davet koduyla katılabilirsin." : errMsg(err)); }));
+    group = s.data(); if (!cfgPending) cfg = normCfg(group.cfg); const was = owner; owner = group.owner === me.uid;
+    if (first || was !== owner) { first = false; startData(); show("app"); showTab(); }
+    if (owner && !recDone && dataReady) runRecurring();
+    render();
+  }, err => { leaveLocal(err.code === "permission-denied" ? "Bu gruba erişimin kaldırılmış. Yeni bir katılma isteği gönderebilirsin." : errMsg(err), true); }));
 }
-let dataUnsub = [];
+let dataReady = false;
 function startData() {
-  dataUnsub.forEach(f => f()); dataUnsub = []; items = new Map();
-  const txCol = F.collection(db, "groups", gid, "tx");
-  const onTx = s => { for (const ch of s.docChanges()) { if (ch.type === "removed") items.delete(ch.doc.id); else { const it = normItem(ch.doc.id, ch.doc.data()); if (it) items.set(it.id, it); } } $("off").hidden = !s.metadata.fromCache || navigator.onLine; render(); };
-  const onErr = err => toast(errMsg(err));
+  dataUnsub.forEach(f => f()); dataUnsub = []; items = new Map(); dataReady = false;
+  const onTx = s => { for (const ch of s.docChanges()) { if (ch.type === "removed") items.delete(ch.doc.id); else { const it = normItem(ch.doc.id, ch.doc.data()); if (it) items.set(it.id, it); } } $("off").hidden = navigator.onLine; if (!dataReady) { dataReady = true; if (owner && !recDone) runRecurring(); } render(); };
+  const onErr = err => { if (err.code !== "permission-denied") toast(errMsg(err)); };
   if (owner) {
-    const cutoff = shiftM(today().slice(0, 7), -24) + "-01";
-    dataUnsub.push(F.onSnapshot(F.query(txCol, F.where("date", ">=", cutoff)), { includeMetadataChanges: false }, onTx, onErr));
-    dataUnsub.push(F.onSnapshot(F.collection(db, "groups", gid, "members"), s => { members = {}; s.forEach(d => members[d.id] = { name: String(d.data().name || "").slice(0, 40) }); render(); }, onErr));
+    dataUnsub.push(F.onSnapshot(F.query(C("groups", gid, "tx"), F.where("date", ">=", shiftM(today().slice(0, 7), -24) + "-01")), onTx, onErr));
+    dataUnsub.push(F.onSnapshot(C("groups", gid, "members"), s => { members = {}; s.forEach(d => members[d.id] = { name: String(d.data().name || "").slice(0, 30), joined: Number(d.data().joined) || 0 }); render(); }, onErr));
+    dataUnsub.push(F.onSnapshot(C("groups", gid, "requests"), s => { requests = []; s.forEach(d => { const x = d.data(); if (x.status === "pending") requests.push({ id: d.id, name: String(x.name || "İsimsiz").slice(0, 30), ts: Number(x.ts) || 0 }); }); requests.sort((a, b) => a.ts - b.ts); render(); }, onErr));
   } else {
-    dataUnsub.push(F.onSnapshot(F.query(txCol, F.where("uid", "==", me.uid)), onTx, onErr));
-    members = { [me.uid]: { name: userDoc.name } };
+    dataUnsub.push(F.onSnapshot(F.query(C("groups", gid, "tx"), F.where("uid", "==", me.uid)), onTx, onErr));
+    members = { [me.uid]: { name: myName } };
   }
-  unsub.push(() => dataUnsub.forEach(f => f()));
 }
-async function leaveLocal(msg) {
-  stopAll();
-  try { await F.setDoc(F.doc(db, "users", me.uid), { gid: null }, { merge: true }); } catch (e) { }
-  userDoc.gid = null; showOnb(msg);
+async function leaveLocal(msg, kicked) {
+  stopAll(); LS.del("butce-member");
+  try { await F.setDoc(D("users", me.uid), { gid: null, was: !!kicked }, { merge: true }); } catch (e) { }
+  showWelcome(msg);
 }
 
 /* ---------- yazma ---------- */
-const gRef = () => F.doc(db, "groups", gid);
-const txRef = id => F.doc(db, "groups", gid, "tx", id);
-let cfgT = 0;
+let cfgT = 0, cfgExtra = {}, cfgPending = false;
 function saveCfg(extra) {
-  render(); clearTimeout(cfgT);
-  cfgT = setTimeout(() => { F.updateDoc(gRef(), { cfg: JSON.parse(JSON.stringify(cfg)), ...(extra || {}) }).catch(err => toast("Ayar kaydedilemedi: " + errMsg(err))); }, 250);
+  render(); Object.assign(cfgExtra, extra || {}); if (extra && extra.name && group) group.name = extra.name; clearTimeout(cfgT); cfgPending = true;
+  cfgT = setTimeout(() => { const x = cfgExtra; cfgExtra = {}; F.updateDoc(D("groups", gid), { cfg: JSON.parse(JSON.stringify(cfg)), ...x }).catch(err => toast("Kaydedilemedi: " + errMsg(err))).finally(() => { if (!cfgExtra.__n) cfgPending = false; }); }, 250);
 }
-const bodyOf = it => ({ uid: it.uid, type: it.type, cat: it.cat, amt: it.amt, date: it.date, note: it.note, pm: it.pm, status: it.status, ts: it.ts });
-async function putItem(it) {
+const bodyOf = it => ({ uid: it.uid, by: it.by || "", type: it.type, cat: it.cat, amt: it.amt, date: it.date, note: it.note, pm: it.pm, status: it.status, ts: it.ts, auto: !!it.auto });
+function putItem(it) {
   const prev = items.get(it.id); items.set(it.id, it); render();
-  // Çevrimdışıyken yazma yerel olarak kaydedilir ve bağlanınca gönderilir; bu yüzden beklemiyoruz.
-  F.setDoc(txRef(it.id), bodyOf(it)).catch(err => { if (prev) items.set(it.id, prev); else items.delete(it.id); render(); toast(errMsg(err)); });
+  F.setDoc(D("groups", gid, "tx", it.id), bodyOf(it)).catch(err => { if (prev) items.set(it.id, prev); else items.delete(it.id); render(); toast(errMsg(err)); });
+}
+function delItem(it) { items.delete(it.id); render(); F.deleteDoc(D("groups", gid, "tx", it.id)).catch(err => { items.set(it.id, it); render(); toast(errMsg(err)); }); }
+function newItem(o) {
+  return { id: F.doc(C("groups", gid, "tx")).id, uid: me.uid, by: myName, type: o.type, cat: o.cat, amt: Math.round(o.amt * 100) / 100, date: o.date || today(), note: (o.note || "").slice(0, 80), pm: o.pm || cfg.pms[0] || "", status: !owner && cfg.approval ? "pending" : "ok", ts: Date.now(), auto: !!o.auto };
+}
+function submitEntry(o) {
+  if (!owner && cfg.locked) { toast("Şu an kayıt eklenemiyor."); return false; }
+  const it = newItem(o); putItem(it); cur = ym(it.date); render();
+  const c = catOf("exp", it.cat); let extra = "";
+  if (it.type === "exp" && c && c.lim) { const u = sums(inMonth(cur).filter(t => t.cat === c.n && t.type === "exp")).exp; if (u > c.lim) extra = " · " + c.n + " limiti aşıldı!"; else if (u > c.lim * .8) extra = " · " + c.n + " limitinin %" + Math.round(u / c.lim * 100) + "'i doldu"; }
+  toast((it.type === "exp" ? "Gider" : "Gelir") + " eklendi: " + fmt(it.amt) + (it.status === "pending" ? " (onay bekliyor)" : "") + extra);
   return true;
 }
-function delItem(it) { items.delete(it.id); render(); F.deleteDoc(txRef(it.id)).catch(err => { items.set(it.id, it); render(); toast(errMsg(err)); }); }
+function runRecurring() {
+  recDone = true; const m = today().slice(0, 7), d = Number(today().slice(8)); let n = 0;
+  for (const r of cfg.rec) { if (r.last === m || d < r.day) continue; putItem(newItem({ type: r.type, cat: r.cat, amt: r.amt, note: r.note || r.cat, pm: r.pm, date: m + "-" + String(r.day).padStart(2, "0"), auto: true })); r.last = m; n++; }
+  if (n) { saveCfg(); toast(n + " düzenli ödeme bu ay için eklendi."); }
+}
 
 /* ---------- çizim ---------- */
 function render() {
   if (!group) return;
   $("gTitle").textContent = group.name || "Bütçe";
   $("mlabel").textContent = mName(cur);
-  $("role").textContent = owner ? "Yönetici" : "Harcayan";
+  $("role").textContent = owner ? "Yönetici" : "Üye";
   $("admTab").hidden = !owner; if (!owner && tab === "adm") { tab = "rec"; showTab(); return; }
   const M = inMonth(cur), s = sums(M);
   $("balLbl").textContent = owner ? "Bu ayki ortak bakiye" : "Bu ayki bakiyem";
-  $("bal").textContent = sfmt(s.bal); $("inc").textContent = fmt(s.inc); $("exp").textContent = fmt(s.exp);
-  $("pendBox").hidden = !s.pend; $("pend").textContent = fmt(s.pend);
+  $("bal").textContent = sfmt(s.bal); $("inc").textContent = fmt0(s.inc); $("exp").textContent = fmt0(s.exp);
+  $("pendBox").hidden = !s.pend; $("pend").textContent = fmt0(s.pend);
   renderBudget(s);
   $("ann").hidden = !cfg.note; $("ann").innerHTML = cfg.note ? "<b>Duyuru:</b> " + esc(cfg.note) : "";
-  const pc = all().filter(t => t.status === "pending").length; $("admBdg").hidden = !(owner && pc); $("admBdg").textContent = pc;
-  renderForm(); renderList();
+  const pc = all().filter(t => t.status === "pending").length + requests.length;
+  $("admBdg").hidden = !(owner && pc); $("admBdg").textContent = pc;
+  $("lockWarn").hidden = !(!owner && cfg.locked); $("fab").hidden = (!owner && cfg.locked) || tab === "adm" || tab === "me";
+  renderFilters(); renderList();
   if (tab === "sum") renderSum();
+  if (tab === "goal") renderGoals();
   if (tab === "adm" && owner && !$("p-adm").contains(document.activeElement)) renderAdm();
   if (tab === "me" && !$("p-me").contains(document.activeElement)) renderMe();
 }
 function renderBudget(s) {
-  const myLim = cfg.plim[me.uid] || 0; let lim = cfg.limit, used = s.exp, label = "Aylık limit";
-  if (!owner) { lim = myLim; label = "Kişisel limitim"; }
-  if (!lim) { $("bud").innerHTML = owner ? `<div>Aylık harcama limiti yok.</div><div style="opacity:.8;font-size:13px">Yönetim sekmesinden veya <b>/limit 20000</b> komutuyla belirle.</div>` : `<div>Sana kişisel harcama limiti tanımlanmadı.</div>`; return; }
-  const p = Math.min(100, used / lim * 100), left = lim - used;
-  $("bud").innerHTML = `<div class="rw"><span>${label}</span><span class="num">${fmt(lim)}</span></div><div class="bar"><i class="${used > lim ? "over" : ""}" style="width:${p}%"></i></div><div class="rw"><span>${left >= 0 ? "Kalan" : "Aşım"}</span><span class="num">${fmt(left)}</span></div>`;
+  let lim = cfg.limit, label = "Aylık limit";
+  if (!owner) { lim = cfg.plim[me.uid] || 0; label = "Kişisel limitim"; }
+  if (!lim) { $("bud").innerHTML = owner ? `<div><b>Limit yok</b></div><div style="opacity:.8;margin-top:2px">Yönetim'den ya da <b>/limit 20000</b> komutuyla belirle.</div>` : `<div>Sana kişisel limit tanımlanmadı.</div>`; return; }
+  const p = Math.min(100, s.exp / lim * 100), left = lim - s.exp;
+  const [y, mo] = cur.split("-").map(Number), dim = new Date(y, mo, 0).getDate();
+  const perDay = cur === today().slice(0, 7) && left > 0 ? left / (dim - Number(today().slice(8)) + 1) : 0;
+  $("bud").innerHTML = `<div class="rw"><span>${label}</span><span class="num">${fmt0(lim)}</span></div><div class="bar"><i class="${s.exp > lim ? "over" : p > 80 ? "warn" : ""}" style="width:${p}%"></i></div><div class="rw"><span>${left >= 0 ? "Kalan <b class='num'>" + fmt0(left) + "</b>" : "Aşım <b class='num'>" + fmt0(left) + "</b>"}</span>${perDay ? `<span>Günde ~${fmt0(perDay)}</span>` : ""}</div>`;
 }
-let lastFormSig = "";
-function renderForm() {
-  const sig = JSON.stringify([type, cfg.cats[type].map(c => c.n), cfg.pms]);
-  if (sig !== lastFormSig) {
-    lastFormSig = sig; const v = $("cat").value, pv = $("pm").value;
-    $("cat").innerHTML = cfg.cats[type].map(c => `<option>${esc(c.n)}</option>`).join(""); if (v && catOf(type, v)) $("cat").value = v;
-    $("pm").innerHTML = cfg.pms.map(p => `<option>${esc(p)}</option>`).join(""); if (cfg.pms.includes(pv)) $("pm").value = pv;
-  }
-  $("tExp").setAttribute("aria-pressed", type === "exp"); $("tInc").setAttribute("aria-pressed", type === "inc");
-  const blocked = !owner && cfg.locked;
-  $("lockMsg").hidden = !blocked; $("lockMsg").textContent = "Yönetici yeni kayıtları geçici olarak kapattı.";
-  for (const el of $("f").querySelectorAll("input,select,button")) el.disabled = blocked;
-  const c = catOf(type, $("cat").value); let w = "";
-  if (type === "exp" && c && c.lim) { const used = sums(inMonth(cur).filter(t => t.cat === c.n && t.type === "exp")).exp; w = `${esc(c.n)} limiti: ${fmt(used)} / ${fmt(c.lim)}` + (used >= c.lim ? " (aşıldı)" : ""); }
-  if (!owner && cfg.approval) w += (w ? " · " : "") + "Kayıtların yönetici onayından sonra toplama eklenir.";
-  $("catWarn").hidden = !w; $("catWarn").innerHTML = w;
-  $("fTitle").textContent = editId ? "Kaydı düzenle" : "Yeni kayıt"; $("cancelEdit").hidden = !editId; $("save").textContent = editId ? "Güncelle" : "Kaydet";
+function renderFilters() {
   const fc = $("fCat"), fv = fc.value; const cats = [...new Set([...cfg.cats.exp, ...cfg.cats.inc].map(c => c.n))];
   fc.innerHTML = `<option value="">Tüm kategoriler</option>` + cats.map(n => `<option>${esc(n)}</option>`).join(""); fc.value = cats.includes(fv) ? fv : "";
   const ids = Object.keys(members), fw = $("fWho"); fw.hidden = !owner || ids.length < 2;
   if (!fw.hidden) { const wv = fw.value; fw.innerHTML = `<option value="">Herkes</option>` + ids.map(u => `<option value="${esc(u)}">${esc(who(u))}</option>`).join(""); fw.value = ids.includes(wv) ? wv : ""; }
 }
 function itemRow(t, admin) {
-  const st = t.status === "pending" ? `<span class="pill p">Onay bekliyor</span>` : t.status === "rejected" ? `<span class="pill r">Reddedildi</span>` : "";
-  const sub = [t.cat, t.pm, owner && Object.keys(members).length > 1 || admin ? who(t.uid) : ""].filter(Boolean).map(esc).join(" · ");
+  const st = t.status === "pending" ? `<span class="pill p">Onay bekliyor</span>` : t.status === "rejected" ? `<span class="pill r">Reddedildi</span>` : t.auto ? `<span class="pill t">Düzenli</span>` : "";
+  const sub = [t.cat, t.pm, (owner && Object.keys(members).length > 1) || admin ? who(t.uid, t.by) : "", admin ? new Date(t.date + "T12:00").toLocaleDateString("tr-TR", { day: "numeric", month: "short" }) : ""].filter(Boolean).map(esc).join(" · ");
   let acts = ""; const k = esc(t.id);
   if (admin) acts = `<button class="ok" data-a="ok" data-k="${k}">Onayla</button><button data-a="rej" data-k="${k}">Reddet</button>`;
-  else {
-    if (owner && t.status === "pending") acts += `<button class="ok" data-a="ok" data-k="${k}">Onayla</button>`;
-    if (canEditItem(t)) acts += `<button data-a="edit" data-k="${k}">Düzenle</button><button data-a="dup" data-k="${k}">Bugün tekrarla</button><button data-a="del" data-k="${k}">Sil</button>`;
+  else if (openId === t.id) {
+    if (owner && t.status !== "ok") acts += `<button class="ok" data-a="ok" data-k="${k}">Onayla</button>`;
+    if (canEditItem(t)) acts += `<button data-a="edit" data-k="${k}">Düzenle</button><button data-a="dup" data-k="${k}">Bugün tekrarla</button><button data-a="del" data-k="${k}" class="danger">Sil</button>`;
+    else acts += `<span class="note">Bu kayıt onaylandığı için değiştirilemez.</span>`;
   }
-  return `<li class="tx"><span class="dot" style="background:${col(t.type, t.cat)}">${esc(t.cat.charAt(0))}</span><div><div class="t">${esc(t.note || t.cat)}${st}</div><div class="s">${sub}${admin ? " · " + esc(t.date) : ""}</div></div><span class="num ${t.type === "exp" ? "neg" : "pos"}">${t.type === "exp" ? "−" : "+"}${fmt(t.amt)}</span>${acts ? `<div class="acts">${acts}</div>` : ""}</li>`;
+  return `<li class="tx" data-open="${k}"><span class="dot" style="background:${col(t.type, t.cat)}">${esc(t.cat.charAt(0))}</span><div><div class="t">${esc(t.note || t.cat)}${st}</div><div class="s">${sub}</div></div><span class="num ${t.type === "exp" ? "neg" : "pos"}">${t.type === "exp" ? "−" : "+"}${fmt(t.amt)}</span>${acts ? `<div class="acts">${acts}</div>` : ""}</li>`;
 }
 function renderList() {
   const q = low($("q").value.trim()), fc = $("fCat").value, fw = $("fWho").value;
-  const L = inMonth(cur).filter(t => (!fc || t.cat === fc) && (!fw || t.uid === fw) && (!q || low(t.cat + " " + t.note + " " + t.pm + " " + who(t.uid)).includes(q))).sort((a, b) => b.date.localeCompare(a.date) || b.ts - a.ts);
-  if (!items.size) { $("list").innerHTML = `<div class="empty">Henüz kayıt yok. Formdan ya da üstteki komut çubuğundan ilk kaydını ekle (örn. <b>250 market kahve</b>).</div>`; return; }
+  const L = inMonth(cur).filter(t => (!fc || t.cat === fc) && (!fw || t.uid === fw) && (!q || low(t.cat + " " + t.note + " " + t.pm + " " + who(t.uid, t.by)).includes(q))).sort((a, b) => b.date.localeCompare(a.date) || b.ts - a.ts);
+  $("cnt").textContent = L.length ? L.length + " kayıt" : "";
+  if (!items.size) { $("list").innerHTML = `<div class="empty"><b>Henüz kayıt yok</b><br>Sağ alttaki <b>+</b> düğmesiyle ya da üstteki çubuğa <b>250 market</b> yazarak ilk kaydını ekle.</div>`; return; }
   if (!L.length) { $("list").innerHTML = `<div class="empty">${q || fc || fw ? "Filtreyle eşleşen kayıt yok." : "Bu ay için kayıt yok."}</div>`; return; }
-  let h = "", last = ""; for (const t of L) { if (t.date !== last) { last = t.date; h += `<li class="day">${esc(new Date(t.date + "T12:00").toLocaleDateString("tr-TR", { weekday: "long", day: "numeric", month: "long" }))}</li>`; } h += itemRow(t); }
-  $("list").innerHTML = `<ul>${h}</ul>`;
+  const byDay = {}; for (const t of L) (byDay[t.date] = byDay[t.date] || []).push(t);
+  $("list").innerHTML = Object.entries(byDay).map(([d, arr]) => { const net = arr.filter(t => t.status === "ok").reduce((a, t) => a + (t.type === "exp" ? -t.amt : t.amt), 0);
+    return `<div class="day"><span>${esc(new Date(d + "T12:00").toLocaleDateString("tr-TR", { weekday: "long", day: "numeric", month: "long" }))}</span><span class="num">${net ? sfmt(net) : ""}</span></div><ul>${arr.map(t => itemRow(t)).join("")}</ul>`; }).join("");
 }
 function hbars(rows, total) {
   if (!rows.length) return `<p class="note">Bu ay veri yok.</p>`; const mx = Math.max(...rows.map(r => r.v), 1);
-  return rows.map(r => `<div class="hb"><div class="rw"><span>${esc(r.n)} <span class="m">%${total ? Math.round(r.v / total * 100) : 0}${r.lim ? " · limit " + fmt(r.lim) : ""}</span></span><span class="num${r.lim && r.v > r.lim ? " neg" : ""}">${fmt(r.v)}</span></div><div class="tr"><i style="width:${r.v / mx * 100}%;background:${r.c || "var(--teal)"}"></i></div></div>`).join("");
+  return rows.map(r => `<div class="hb"><div class="rw"><span>${esc(r.n)} <span class="m">%${total ? Math.round(r.v / total * 100) : 0}${r.lim ? " · limit " + fmt0(r.lim) : ""}</span></span><span class="num${r.lim && r.v > r.lim ? " neg" : ""}">${fmt(r.v)}</span></div><div class="tr"><i style="width:${r.v / mx * 100}%;background:${r.c || "var(--teal)"}"></i></div></div>`).join("");
 }
 function renderSum() {
   const M = inMonth(cur).filter(t => t.status === "ok"), s = sums(M), prev = sums(inMonth(shiftM(cur, -1)).filter(t => t.status === "ok"));
   const ch = prev.exp ? Math.round((s.exp - prev.exp) / prev.exp * 100) : null;
   const [y, mo] = cur.split("-").map(Number); const dim = new Date(y, mo, 0).getDate(); const isCur = cur === today().slice(0, 7); const dd = isCur ? Number(today().slice(8)) : dim;
-  $("kpis").innerHTML = [["Gider", fmt(s.exp), ch === null ? "Geçen ay veri yok" : (ch >= 0 ? "+" : "") + ch + "% geçen aya göre"], ["Gelir", fmt(s.inc), ""], ["Bakiye", sfmt(s.bal), s.inc ? "Gelirin %" + Math.max(0, Math.round(s.bal / s.inc * 100)) + " kaldı" : ""], ["Günlük ortalama", fmt(s.exp / dd), isCur ? "Ay sonu tahmini " + fmt(s.exp / dd * dim) : ""]].map(k => `<div class="card"><span>${k[0]}</span><b class="num">${k[1]}</b><span>${esc(k[2])}</span></div>`).join("");
+  $("kpis").innerHTML = [["Gider", fmt(s.exp), ch === null ? "Geçen ay verisi yok" : (ch >= 0 ? "▲ %" : "▼ %") + Math.abs(ch) + " geçen aya göre"], ["Gelir", fmt(s.inc), ""], ["Tasarruf", sfmt(s.bal), s.inc ? "Gelirin %" + Math.max(0, Math.round(s.bal / s.inc * 100)) + "'i" : ""], ["Günlük ortalama", fmt(s.exp / dd), isCur ? "Ay sonu tahmini " + fmt0(s.exp / dd * dim) : ""]].map(k => `<div class="card"><span>${k[0]}</span><b class="num">${k[1]}</b><span>${esc(k[2])}</span></div>`).join("");
   const E = M.filter(t => t.type === "exp"); const by = f => { const o = {}; E.forEach(t => o[f(t)] = (o[f(t)] || 0) + t.amt); return Object.entries(o).sort((a, b) => b[1] - a[1]); };
-  $("sCat").innerHTML = hbars(by(t => t.cat).map(([n, v]) => ({ n, v, c: col("exp", n), lim: (catOf("exp", n) || {}).lim })), s.exp);
+  const cats = by(t => t.cat);
+  let off = 25, seg = ""; for (const [n, v] of cats) { const p = v / (s.exp || 1) * 100; seg += `<circle cx="21" cy="21" r="15.915" fill="none" stroke="${col("exp", n)}" stroke-width="6" stroke-dasharray="${p} ${100 - p}" stroke-dashoffset="${off}"/>`; off -= p; }
+  $("donut").innerHTML = `<circle cx="21" cy="21" r="15.915" fill="none" stroke="var(--soft)" stroke-width="6"/>${seg}<text x="21" y="22.5" text-anchor="middle" font-size="5" font-weight="700" fill="currentColor">${esc(fmt0(s.exp))}</text>`;
+  $("sCat").innerHTML = hbars(cats.map(([n, v]) => ({ n, v, c: col("exp", n), lim: (catOf("exp", n) || {}).lim })), s.exp);
+  const dv = Array.from({ length: dim }, (_, i) => E.filter(t => Number(t.date.slice(8)) === i + 1).reduce((a, t) => a + t.amt, 0)); const dm = Math.max(...dv, 1);
+  $("sDays").innerHTML = dv.map((v, i) => `<i class="${v ? "" : "z"}${isCur && i + 1 === dd ? " td" : ""}" style="height:${Math.max(3, v / dm * 100)}%" title="${i + 1}: ${fmt(v)}"></i>`).join("");
+  const maxD = dv.indexOf(Math.max(...dv)); $("sDaysN").textContent = dv.some(Boolean) ? `En çok harcanan gün: ${maxD + 1} ${mName(cur, 1)} (${fmt(dv[maxD])})` : "Bu ay gider yok.";
   $("sWhoT").textContent = owner ? "Kişiye göre gider" : "Benim giderim";
-  $("sWho").innerHTML = hbars(by(t => t.uid).map(([u, v]) => ({ n: who(u), v, lim: cfg.plim[u] })), s.exp);
+  $("sWho").innerHTML = hbars(by(t => t.uid).map(([u, v]) => ({ n: who(u, (E.find(t => t.uid === u) || {}).by), v, lim: cfg.plim[u], c: avc(u) })), s.exp);
   $("sPm").innerHTML = hbars(by(t => t.pm || "Belirtilmedi").map(([n, v]) => ({ n, v })), s.exp);
+  $("sTop").innerHTML = E.length ? `<ul>${[...E].sort((a, b) => b.amt - a.amt).slice(0, 5).map(t => `<div class="rw" style="padding:8px 0;border-bottom:1px solid var(--rule)"><span>${esc(t.note || t.cat)} <span class="note">· ${esc(t.cat)}</span></span><span class="num neg">${fmt(t.amt)}</span></div>`).join("")}</ul>` : `<p class="note">Bu ay gider yok.</p>`;
   const ms = [5, 4, 3, 2, 1, 0].map(i => shiftM(cur, -i)); const vs = ms.map(m => sums(inMonth(m)).exp); const mx = Math.max(...vs, 1);
-  $("sMon").innerHTML = ms.map((m, i) => `<div class="${m === cur ? "cur" : ""}"><span class="num" style="font-size:11px">${vs[i] ? (Math.round(vs[i] / 100) / 10).toLocaleString("tr-TR") + "b" : ""}</span><i style="height:${vs[i] / mx * 100}%"></i><span>${esc(mName(m, 1))}</span></div>`).join("");
+  $("sMon").innerHTML = ms.map((m, i) => `<div class="${m === cur ? "cur" : ""}"><span class="num" style="font-size:10px">${vs[i] ? (vs[i] >= 1000 ? (Math.round(vs[i] / 100) / 10).toLocaleString("tr-TR") + "b" : Math.round(vs[i])) : ""}</span><i style="height:${vs[i] / mx * 100}%"></i><span>${esc(mName(m, 1))}</span></div>`).join("");
 }
-function catRows(t) { return cfg.cats[t].map((c, i) => `<div class="crow"><input type="color" value="${esc(c.c)}" data-ct="${t}" data-i="${i}" data-f="c" aria-label="Renk"><input type="text" value="${esc(c.n)}" data-ct="${t}" data-i="${i}" data-f="n" aria-label="Kategori adı">${t === "exp" ? `<input class="lim" inputmode="decimal" placeholder="Limit ₺" value="${c.lim || ""}" data-ct="${t}" data-i="${i}" data-f="lim" aria-label="Kategori limiti">` : ""}<button class="x" data-del="${t}" data-i="${i}" aria-label="Sil">×</button></div>`).join(""); }
+function renderGoals() {
+  $("addGoal").hidden = !owner; $("addRec").hidden = !owner;
+  $("goals").innerHTML = cfg.goals.length ? cfg.goals.map(g => { const p = g.target ? Math.min(100, g.saved / g.target * 100) : 0;
+    return `<div class="goal"><div class="rw"><b>${esc(g.n)}</b><span class="num">${fmt0(g.saved)} <span class="note">/ ${fmt0(g.target)}</span></span></div><div class="tr"><i style="width:${p}%;background:${g.c}"></i></div><div class="rw"><span class="note">%${Math.round(p)}${g.target > g.saved ? " · kalan " + fmt0(g.target - g.saved) : " · hedefe ulaşıldı 🎉"}</span>${owner ? `<span class="btns"><button class="ghost" data-g="+" data-id="${esc(g.id)}">+ Para ekle</button><button class="ghost" data-g="-" data-id="${esc(g.id)}">−</button><button class="x" data-g="x" data-id="${esc(g.id)}" aria-label="Sil">×</button></span>` : ""}</div></div>`; }).join("") : `<p class="note">${owner ? "Tatil, araba, acil durum fonu… Bir hedef ekle, ne kadar biriktirdiğini herkes görsün." : "Yönetici henüz bir birikim hedefi eklemedi."}</p>`;
+  $("recs").innerHTML = cfg.rec.length ? cfg.rec.map(r => `<div class="req"><span class="dot" style="background:${col(r.type, r.cat)};width:40px;height:40px">${esc(r.cat.charAt(0))}</span><span class="n">${esc(r.note || r.cat)}<small>Her ayın ${r.day}. günü · ${esc(r.cat)}${r.last === today().slice(0, 7) ? " · bu ay eklendi" : ""}</small></span><span class="num ${r.type === "exp" ? "neg" : "pos"}">${r.type === "exp" ? "−" : "+"}${fmt0(r.amt)}</span>${owner ? `<button class="x" data-r="${esc(r.id)}" aria-label="Sil">×</button>` : ""}</div>`).join("") : `<p class="note">${owner ? "Kira, fatura, abonelik gibi her ay tekrarlanan ödemeleri ekle, otomatik girilsin." : "Düzenli ödeme tanımlanmadı."}</p>`;
+}
+function catRows(t) { return cfg.cats[t].map((c, i) => `<div class="crow"><input type="color" value="${esc(c.c)}" data-ct="${t}" data-i="${i}" data-f="c" aria-label="Renk"><input type="text" value="${esc(c.n)}" data-ct="${t}" data-i="${i}" data-f="n" aria-label="Kategori adı">${t === "exp" ? `<input class="lim" inputmode="decimal" placeholder="Limit ₺" value="${c.lim || ""}" data-ct="${t}" data-i="${i}" data-f="lim" aria-label="Limit">` : ""}<button class="x" data-del="${t}" data-i="${i}" aria-label="Sil">×</button></div>`).join(""); }
 function renderAdm() {
   $("code").textContent = group.code || "——";
+  $("reqCard").hidden = false;
+  $("reqs").innerHTML = requests.length ? requests.map(r => `<div class="req"><span class="av" style="background:${avc(r.id)}">${esc(r.name.charAt(0).toUpperCase())}</span><span class="n">${esc(r.name)}<small>${esc(new Date(r.ts).toLocaleString("tr-TR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }))}</small></span><button class="go" data-acc="${esc(r.id)}" style="min-height:42px">Kabul et</button><button class="ghost" data-rej="${esc(r.id)}">Reddet</button></div>`).join("") : `<p class="note">Bekleyen istek yok. Yeni kişi eklemek için grup kodunu paylaş.</p>`;
   $("aGName").value = group.name || ""; $("aLim").value = cfg.limit || ""; $("aAppr").checked = cfg.approval; $("aLock").checked = cfg.locked; $("aNote").value = cfg.note; $("aPm").value = cfg.pms.join(", ");
   $("aExp").innerHTML = catRows("exp"); $("aInc").innerHTML = catRows("inc");
   const P = all().filter(t => t.status === "pending").sort((a, b) => a.ts - b.ts);
   $("pendCard").hidden = !cfg.approval && !P.length;
-  $("pendList").innerHTML = P.length ? `<ul>${P.map(t => itemRow(t, true)).join("")}</ul>` : `<p class="note">Onay bekleyen harcama yok.</p>`;
+  $("pendList").innerHTML = P.length ? `<ul>${P.map(t => itemRow(t, true)).join("")}</ul><button class="ghost" id="apprAll" style="margin-top:6px">Hepsini onayla</button>` : `<p class="note">Onay bekleyen harcama yok.</p>`;
   const M = inMonth(cur).filter(t => t.status === "ok" && t.type === "exp");
   $("aPeople").innerHTML = Object.keys(members).map(u => { const sp = M.filter(t => t.uid === u).reduce((a, t) => a + t.amt, 0); const self = u === me.uid;
-    return `<div style="padding:10px 0;border-bottom:1px solid var(--rule)"><div class="rw"><b>${esc(members[u].name || "İsimsiz")}${self ? " (sen)" : ""}</b><span class="num">${fmt(sp)}</span></div><div class="two" style="margin-top:6px"><label>Takma ad<input value="${esc(cfg.nick[u] || "")}" data-nick="${esc(u)}" maxlength="30"></label><label>Aylık limit ₺<input inputmode="decimal" value="${cfg.plim[u] || ""}" data-plim="${esc(u)}"></label></div>${self ? "" : `<button class="link" data-kick="${esc(u)}">Gruptan çıkar</button>`}</div>`; }).join("") || `<p class="note">Henüz kimse yok. Davet kodunu paylaş.</p>`;
+    return `<div style="padding:10px 0;border-bottom:1px solid var(--rule)"><div class="req" style="border:0;padding:0"><span class="av" style="background:${avc(u)}">${esc((members[u].name || "?").charAt(0).toUpperCase())}</span><span class="n">${esc(members[u].name || "İsimsiz")}${self ? " (sen)" : ""}<small>Bu ay ${esc(fmt(sp))}${cfg.plim[u] ? " / " + esc(fmt0(cfg.plim[u])) : ""}</small></span>${self ? "" : `<button class="ghost danger" data-kick="${esc(u)}">Çıkar</button>`}</div><div class="two" style="margin-top:8px"><label>Takma ad<input value="${esc(cfg.nick[u] || "")}" data-nick="${esc(u)}" maxlength="30"></label><label>Aylık limit ₺<input inputmode="decimal" value="${cfg.plim[u] || ""}" data-plim="${esc(u)}"></label></div></div>`; }).join("");
 }
 function renderMe() {
-  $("meName").textContent = userDoc.name || ""; $("meMail").textContent = me.email || ""; $("meNameIn").value = userDoc.name || "";
-  $("meGroup").textContent = (group.name || "Grup") + " · " + (owner ? "Yöneticisin" : "Harcayan olarak katıldın");
+  $("meName").value = myName; $("meRole").textContent = owner ? "Bu grubun yöneticisisin." : "Bu grubun üyesisin.";
+  const hasPin = !!LS.get("butce-pin"); $("pinState").textContent = hasPin ? "PIN kilidi açık. Uygulama açılırken ve 2 dakikadan uzun arka planda kalınca PIN sorulur." : "Telefonunu başkası da kullanıyorsa 4 haneli bir PIN koyabilirsin."; $("pinSet").textContent = hasPin ? "PIN'i değiştir" : "PIN belirle"; $("pinOff").hidden = !hasPin;
+  $("keyCard").hidden = !owner; $("meGroup").textContent = (group.name || "Grup") + " · " + Object.keys(members).length + " kişi";
   $("leave").textContent = owner ? "Grubu sil" : "Gruptan ayrıl";
 }
 
-/* ---------- kayıt ekleme ---------- */
-function submitEntry(o) {
-  if (!owner && cfg.locked) { toast("Şu an kayıt eklenemiyor."); return false; }
-  const id = F.doc(F.collection(db, "groups", gid, "tx")).id;
-  const it = { id, uid: me.uid, type: o.type, cat: o.cat, amt: Math.round(o.amt * 100) / 100, date: o.date || today(), note: (o.note || "").slice(0, 80), pm: o.pm || cfg.pms[0] || "", status: !owner && cfg.approval ? "pending" : "ok", ts: Date.now() };
-  putItem(it); cur = ym(it.date); render();
-  const c = catOf("exp", it.cat); let extra = "";
-  if (it.type === "exp" && c && c.lim) { const u = sums(inMonth(cur).filter(t => t.cat === c.n && t.type === "exp")).exp; if (u > c.lim) extra = " · " + c.n + " limiti aşıldı!"; }
-  toast((it.type === "exp" ? "Gider" : "Gelir") + " eklendi: " + fmt(it.amt) + (it.status === "pending" ? " (onay bekliyor)" : "") + extra);
-  return true;
+/* ---------- kayıt penceresi ---------- */
+function drawChips() { const L = cfg.cats[type]; if (!L.some(c => c.n === selCat)) selCat = L[0].n; $("catChips").innerHTML = L.map(c => `<button type="button" data-cat="${esc(c.n)}" aria-pressed="${c.n === selCat}"><i style="background:${c.c}"></i>${esc(c.n)}</button>`).join(""); catWarn(); }
+function catWarn() {
+  const c = catOf(type, selCat); let w = "";
+  if (type === "exp" && c && c.lim) { const used = sums(inMonth(cur).filter(t => t.cat === c.n && t.type === "exp")).exp; w = `${esc(c.n)} limiti: ${fmt0(used)} / ${fmt0(c.lim)}` + (used >= c.lim ? " (aşıldı)" : ""); }
+  if (!owner && cfg.approval) w += (w ? " · " : "") + "Kayıtların yönetici onayından sonra toplama eklenir.";
+  $("catWarn").hidden = !w; $("catWarn").innerHTML = w;
 }
+function setType(t) { type = t; $("tExp").setAttribute("aria-pressed", t === "exp"); $("tInc").setAttribute("aria-pressed", t === "inc"); drawChips(); }
+function openAdd(t) {
+  if (!owner && cfg.locked) { toast("Yönetici yeni kayıtları kapattı."); return; }
+  editId = null; $("fTitle").textContent = "Yeni kayıt"; $("save").textContent = "Kaydet"; $("amt").value = ""; $("note").value = ""; $("date").value = today();
+  $("pm").innerHTML = cfg.pms.map(p => `<option>${esc(p)}</option>`).join(""); setType(t || "exp");
+  try { $("addDlg").showModal(); } catch (e) { } setTimeout(() => $("amt").focus(), 50);
+}
+function openEdit(t) {
+  editId = t.id; $("fTitle").textContent = "Kaydı düzenle"; $("save").textContent = "Güncelle";
+  $("pm").innerHTML = cfg.pms.map(p => `<option>${esc(p)}</option>`).join(""); selCat = t.cat; setType(t.type);
+  $("amt").value = String(t.amt).replace(".", ","); $("note").value = t.note; $("date").value = t.date; if (cfg.pms.includes(t.pm)) $("pm").value = t.pm;
+  try { $("addDlg").showModal(); } catch (e) { }
+}
+$("fab").onclick = () => openAdd();
+$("tExp").onclick = () => setType("exp"); $("tInc").onclick = () => setType("inc");
+$("catChips").addEventListener("click", e => { const b = e.target.closest("[data-cat]"); if (!b) return; selCat = b.dataset.cat; drawChips(); });
 $("f").addEventListener("submit", e => {
-  e.preventDefault();
-  const amt = num($("amt").value); if (!(amt > 0)) { $("amt").focus(); toast("Geçerli bir tutar gir."); return; }
-  const o = { type, cat: $("cat").value, amt, date: $("date").value || today(), note: $("note").value.trim(), pm: $("pm").value };
-  if (editId) { const old = items.get(editId); if (old) { putItem({ ...old, ...o, amt: Math.round(amt * 100) / 100, status: owner ? old.status : (cfg.approval ? "pending" : "ok") }); toast("Kayıt güncellendi."); } editId = null; $("amt").value = ""; $("note").value = ""; render(); return; }
-  if (submitEntry(o)) { $("amt").value = ""; $("note").value = ""; $("amt").focus(); }
+  e.preventDefault(); const amt = num($("amt").value); if (!(amt > 0)) { $("amt").focus(); toast("Geçerli bir tutar gir."); return; }
+  const o = { type, cat: selCat, amt, date: $("date").value || today(), note: $("note").value.trim(), pm: $("pm").value };
+  if (editId) { const old = items.get(editId); if (old) { putItem({ ...old, ...o, amt: Math.round(amt * 100) / 100, status: owner ? old.status : (cfg.approval ? "pending" : "ok") }); toast("Kayıt güncellendi."); } }
+  else if (!submitEntry(o)) return;
+  editId = null; $("addDlg").close();
 });
-$("cancelEdit").onclick = () => { editId = null; $("amt").value = ""; $("note").value = ""; render(); };
 document.addEventListener("click", e => {
-  const b = e.target.closest("[data-a]"); if (!b) return; const t = items.get(b.dataset.k); if (!t) return; const a = b.dataset.a;
-  if (a === "del") { lastDel = t; delItem(t); toast("Kayıt silindi.", true); }
-  else if (a === "edit") { editId = t.id; type = t.type; tab = "rec"; showTab(); lastFormSig = ""; render(); $("cat").value = t.cat; $("amt").value = String(t.amt).replace(".", ","); $("date").value = t.date; $("note").value = t.note; if (cfg.pms.includes(t.pm)) $("pm").value = t.pm; render(); window.scrollTo({ top: $("f").getBoundingClientRect().top + scrollY - 90, behavior: "smooth" }); }
-  else if (a === "dup") submitEntry({ ...t, date: today() });
-  else if (a === "ok" || a === "rej") { putItem({ ...t, status: a === "ok" ? "ok" : "rejected" }); toast(a === "ok" ? "Onaylandı." : "Reddedildi."); }
+  const cl = e.target.closest("[data-close]"); if (cl) { cl.closest("dialog").close(); return; }
+  const b = e.target.closest("[data-a]");
+  if (b) { const t = items.get(b.dataset.k); if (!t) return; const a = b.dataset.a; e.stopPropagation();
+    if (a === "del") { lastDel = t; openId = null; delItem(t); toast("Kayıt silindi.", true); }
+    else if (a === "edit") openEdit(t);
+    else if (a === "dup") submitEntry({ ...t, date: today(), auto: false });
+    else if (a === "ok" || a === "rej") { putItem({ ...t, status: a === "ok" ? "ok" : "rejected" }); toast(a === "ok" ? "Onaylandı." : "Reddedildi."); }
+    return; }
+  const li = e.target.closest("[data-open]"); if (li && !e.target.closest(".acts")) { openId = openId === li.dataset.open ? null : li.dataset.open; renderList(); }
 });
+for (const d of [$("addDlg"), $("dlg")]) d.addEventListener("click", e => { if (e.target === d) d.close(); });
 $("undo").onclick = () => { if (lastDel) { const t = lastDel; lastDel = null; $("toast").classList.remove("on"); putItem(t); } };
 
 /* ---------- yönetim ---------- */
@@ -561,58 +734,84 @@ $("p-adm").addEventListener("change", e => {
   else if (el.id === "aLock") cfg.locked = el.checked;
   else if (el.id === "aNote") cfg.note = el.value.trim().slice(0, 200);
   else if (el.id === "aPm") { const p = el.value.split(",").map(s => s.trim()).filter(Boolean).slice(0, 10); cfg.pms = p.length ? p : ["Nakit"]; }
-  else if (el.dataset.ct) {
-    const c = cfg.cats[el.dataset.ct][+el.dataset.i]; if (!c) return; const f = el.dataset.f;
+  else if (el.dataset.ct) { const c = cfg.cats[el.dataset.ct][+el.dataset.i]; if (!c) return; const f = el.dataset.f;
     if (f === "n") { const v = el.value.trim().slice(0, 30); if (!v || cfg.cats[el.dataset.ct].some((x, j) => j !== +el.dataset.i && x.n === v)) { el.value = c.n; toast("Bu ad kullanılamaz."); return; } c.n = v; }
-    else if (f === "c") c.c = el.value; else { const v = num(el.value); c.lim = v > 0 ? v : 0; }
-  }
+    else if (f === "c") c.c = el.value; else { const v = num(el.value); c.lim = v > 0 ? v : 0; } }
   else if (el.dataset.nick !== undefined) { const v = el.value.trim(); if (v) cfg.nick[el.dataset.nick] = v.slice(0, 30); else delete cfg.nick[el.dataset.nick]; }
   else if (el.dataset.plim !== undefined) { const v = num(el.value); if (v > 0) cfg.plim[el.dataset.plim] = v; else delete cfg.plim[el.dataset.plim]; }
   else return;
-  saveCfg(extra); toast("Ayar kaydedildi.");
+  saveCfg(extra); toast("Kaydedildi.");
 });
 $("p-adm").addEventListener("click", async e => {
-  const b = e.target.closest("[data-del]");
-  if (b) { const t = b.dataset.del; if (cfg.cats[t].length <= 1) { toast("En az bir kategori kalmalı."); return; } const [r] = cfg.cats[t].splice(+b.dataset.i, 1); saveCfg(); renderAdm(); toast(r.n + " silindi. Eski kayıtlar korunur."); return; }
-  const k = e.target.closest("[data-kick]");
-  if (k) { const u = k.dataset.kick; if (await confirmDlg("Kişiyi çıkar", `${esc(who(u))} gruptan çıkarılsın mı? Eski kayıtları kalır, yeni kayıt giremez.`, "Çıkar")) { try { await F.deleteDoc(F.doc(db, "groups", gid, "members", u)); toast("Kişi çıkarıldı."); } catch (err) { toast(errMsg(err)); } } }
+  const t = e.target;
+  const d = t.closest("[data-del]"); if (d) { const k = d.dataset.del; if (cfg.cats[k].length <= 1) { toast("En az bir kategori kalmalı."); return; } const [r] = cfg.cats[k].splice(+d.dataset.i, 1); saveCfg(); renderAdm(); toast(r.n + " silindi. Eski kayıtlar korunur."); return; }
+  const a = t.closest("[data-acc]"); if (a) { const r = requests.find(x => x.id === a.dataset.acc); if (!r) return; a.disabled = true; try { const b = F.writeBatch(db); b.set(D("groups", gid, "members", r.id), { name: r.name, joined: Date.now() }); b.delete(D("groups", gid, "requests", r.id)); await b.commit(); toast(r.name + " gruba katıldı."); } catch (err) { toast(errMsg(err)); a.disabled = false; } return; }
+  const j = t.closest("[data-rej]"); if (j) { try { await F.updateDoc(D("groups", gid, "requests", j.dataset.rej), { status: "rejected" }); toast("İstek reddedildi."); } catch (err) { toast(errMsg(err)); } return; }
+  const k = t.closest("[data-kick]"); if (k) { const u = k.dataset.kick; if (await confirmDlg("Kişiyi çıkar", `${esc(who(u))} gruptan çıkarılsın mı? Eski kayıtları kalır ama artık giremez.`, "Çıkar")) { try { await F.deleteDoc(D("groups", gid, "members", u)); toast("Çıkarıldı."); } catch (err) { toast(errMsg(err)); } } return; }
+  if (t.id === "apprAll") { const P = all().filter(x => x.status === "pending"); P.forEach(x => putItem({ ...x, status: "ok" })); toast(P.length + " harcama onaylandı."); }
 });
 function addCat(t, n, lim) { n = String(n || "").trim().slice(0, 30); if (!n) { toast("Kategori adı gir."); return false; } if (cfg.cats[t].some(c => low(c.n) === low(n))) { toast("Bu kategori zaten var."); return false; } cfg.cats[t].push({ n, c: PAL[cfg.cats[t].length % PAL.length], lim: lim > 0 ? lim : 0 }); saveCfg(); return true; }
 for (const [btn, t, box] of [["addExp", "exp", "aExp"], ["addInc", "inc", "aInc"]]) $(btn).onclick = () => { let i = 1; while (catOf(t, "Yeni kategori " + i)) i++; if (addCat(t, "Yeni kategori " + i)) { renderAdm(); const ins = $(box).querySelectorAll("input[type=text]"); ins[ins.length - 1].select(); } };
 async function newCode() {
-  const code = makeCode(), old = group.code; const b = F.writeBatch(db);
-  b.set(F.doc(db, "codes", code), { gid }); b.update(gRef(), { code }); if (old) b.delete(F.doc(db, "codes", old));
-  try { await b.commit(); toast("Yeni davet kodu: " + code + ". Eski kod artık çalışmaz."); } catch (err) { toast(errMsg(err)); }
+  const code = rnd(6), old = group.code, b = F.writeBatch(db);
+  b.set(D("codes", code), { gid }); b.update(D("groups", gid), { code }); if (old) b.delete(D("codes", old));
+  try { await b.commit(); toast("Yeni grup kodu: " + code + ". Eski kod artık çalışmaz."); } catch (err) { toast(errMsg(err)); }
 }
 $("newCode").onclick = newCode;
-$("shareCode").onclick = () => share(`${group.name || "Bütçe"} grubuna katıl: uygulamayı aç, kayıt ol ve davet kodunu gir: ${group.code}\n${location.origin.startsWith("http") ? location.origin : ""}`, "Davet kodu kopyalandı.");
-async function share(text, okMsg) { try { if (navigator.share) { await navigator.share({ text }); return; } } catch (e) { if (e && e.name === "AbortError") return; } try { await navigator.clipboard.writeText(text); toast(okMsg); } catch (e) { openDlg("Paylaş", `<textarea readonly style="height:120px">${esc(text)}</textarea>`); } }
-
-function csv(arr) { const q = v => '"' + String(v).replace(/"/g, '""') + '"'; return "﻿" + ["Tarih;Kişi;Tür;Kategori;Tutar;Ödeme;Not;Durum"].concat(arr.sort((a, b) => a.date.localeCompare(b.date)).map(t => [t.date, who(t.uid), t.type === "exp" ? "Gider" : "Gelir", t.cat, String(t.amt).replace(".", ","), t.pm, t.note, { ok: "Onaylı", pending: "Bekliyor", rejected: "Reddedildi" }[t.status]].map(q).join(";"))).join("\r\n"); }
+const inviteLink = () => location.href.split("#")[0] + "#katil-" + group.code;
+$("shareCode").onclick = () => share(`"${group.name || "Bütçe"}" grubuna katıl!\n1) Bağlantıyı aç: ${inviteLink()}\n2) Adını yaz ve "İstek gönder"e dokun.\nGrup kodu: ${group.code}`, "Davet metni kopyalandı.");
+async function share(text, okMsg) { try { if (navigator.share) { await navigator.share({ text }); return; } } catch (e) { if (e && e.name === "AbortError") return; } try { await navigator.clipboard.writeText(text); toast(okMsg); } catch (e) { openDlg("Paylaş", `<textarea readonly style="height:140px">${esc(text)}</textarea>`); } }
+function csv(arr) { const q = v => '"' + String(v).replace(/"/g, '""') + '"'; return "﻿" + ["Tarih;Kişi;Tür;Kategori;Tutar;Ödeme;Not;Durum"].concat([...arr].sort((a, b) => a.date.localeCompare(b.date)).map(t => [t.date, who(t.uid, t.by), t.type === "exp" ? "Gider" : "Gelir", t.cat, String(t.amt).replace(".", ","), t.pm, t.note, { ok: "Onaylı", pending: "Bekliyor", rejected: "Reddedildi" }[t.status]].map(q).join(";"))).join("\r\n"); }
 async function exportCsv(arr, name) {
   const txt = csv(arr), file = new File([txt], name, { type: "text/csv" });
   try { if (navigator.canShare && navigator.canShare({ files: [file] })) { await navigator.share({ files: [file], title: name }); return; } } catch (e) { if (e && e.name === "AbortError") return; }
-  try { const a = document.createElement("a"); a.href = URL.createObjectURL(file); a.download = name; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000); toast(arr.length + " kayıt indirildi."); }
-  catch (e) { share(txt, "CSV kopyalandı."); }
+  try { const a = document.createElement("a"); a.href = URL.createObjectURL(file); a.download = name; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000); toast(arr.length + " kayıt indirildi."); } catch (e) { share(txt, "CSV kopyalandı."); }
 }
-$("csvM").onclick = () => exportCsv(inMonth(cur), `butce-${cur}.csv`);
-$("csvA").onclick = () => exportCsv(all(), `butce-tumu-${today()}.csv`);
+$("csvM").onclick = () => exportCsv(inMonth(cur), `butce-${cur}.csv`); $("csvA").onclick = () => exportCsv(all(), `butce-tumu-${today()}.csv`);
+
+/* ---------- hedefler ve düzenli ödemeler ---------- */
+$("addGoal").onclick = () => formDlg("Yeni birikim hedefi", `<label>Hedef adı<input id="gN" maxlength="40" placeholder="Örn. Yaz tatili"></label><label>Hedef tutar (₺)<input id="gT" inputmode="decimal" placeholder="30000"></label><label>Şu ana kadar biriken (₺)<input id="gS" inputmode="decimal" placeholder="0"></label>`, "Ekle", () => {
+  const n = $("gN").value.trim(), t = num($("gT").value), s = num($("gS").value) || 0; if (!n || !(t > 0)) { toast("Ad ve hedef tutarı gir."); return false; }
+  cfg.goals.push({ id: rnd(8), n: n.slice(0, 40), target: t, saved: Math.max(0, s), c: PAL[cfg.goals.length % PAL.length] }); saveCfg(); renderGoals(); toast("Hedef eklendi.");
+});
+$("goals").addEventListener("click", async e => {
+  const b = e.target.closest("[data-g]"); if (!b) return; const g = cfg.goals.find(x => x.id === b.dataset.id); if (!g) return;
+  if (b.dataset.g === "x") { if (await confirmDlg("Hedefi sil", `"${esc(g.n)}" hedefi silinsin mi?`, "Sil")) { cfg.goals = cfg.goals.filter(x => x !== g); saveCfg(); renderGoals(); } return; }
+  const plus = b.dataset.g === "+";
+  formDlg(plus ? "Hedefe para ekle" : "Hedeften para çek", `<label>Tutar (₺)<input id="gA" inputmode="decimal" placeholder="1000"></label>`, plus ? "Ekle" : "Çek", () => {
+    const a = num($("gA").value); if (!(a > 0)) { toast("Tutar gir."); return false; } g.saved = Math.max(0, Math.round((g.saved + (plus ? a : -a)) * 100) / 100); saveCfg(); renderGoals();
+    toast(g.saved >= g.target ? "Tebrikler, hedefe ulaştınız! 🎉" : `${g.n}: ${fmt0(g.saved)} / ${fmt0(g.target)}`);
+  });
+});
+$("addRec").onclick = () => {
+  const opts = t => cfg.cats[t].map(c => `<option value="${t}|${esc(c.n)}">${t === "exp" ? "Gider" : "Gelir"} · ${esc(c.n)}</option>`).join("");
+  formDlg("Düzenli ödeme ekle", `<label>Açıklama<input id="rN" maxlength="40" placeholder="Örn. Kira"></label><div class="two"><label>Tutar (₺)<input id="rA" inputmode="decimal"></label><label>Ayın kaçında<input id="rD" type="number" min="1" max="28" value="1"></label></div><label>Kategori<select id="rC">${opts("exp")}${opts("inc")}</select></label><div class="sw" style="border:0">Bu ay da ekle<input type="checkbox" id="rNow" checked></div>`, "Ekle", () => {
+    const a = num($("rA").value), d = Math.min(28, Math.max(1, parseInt($("rD").value) || 1)); if (!(a > 0)) { toast("Tutar gir."); return false; }
+    const [t, c] = $("rC").value.split("|"); cfg.rec.push({ id: rnd(8), type: t, cat: c, amt: a, day: d, note: $("rN").value.trim().slice(0, 80), pm: cfg.pms[0], last: $("rNow").checked ? "" : today().slice(0, 7) });
+    saveCfg(); recDone = false; runRecurring(); renderGoals(); toast("Düzenli ödeme eklendi.");
+  });
+};
+$("recs").addEventListener("click", async e => { const b = e.target.closest("[data-r]"); if (!b) return; if (await confirmDlg("Düzenli ödemeyi sil", "Bundan sonra otomatik eklenmeyecek. Eski kayıtlar kalır.", "Sil")) { cfg.rec = cfg.rec.filter(r => r.id !== b.dataset.r); saveCfg(); renderGoals(); } });
 
 /* ---------- hesap ---------- */
-$("meNameIn").addEventListener("change", async e => {
-  const v = e.target.value.trim().slice(0, 40); if (!v) { e.target.value = userDoc.name; return; }
-  userDoc.name = v;
-  try { await F.updateProfile(me, { displayName: v }); await F.setDoc(F.doc(db, "users", me.uid), { name: v }, { merge: true }); await F.updateDoc(F.doc(db, "groups", gid, "members", me.uid), { name: v }); toast("Adın güncellendi."); } catch (err) { toast(errMsg(err)); }
-  renderMe();
+$("meName").addEventListener("change", async e => {
+  const v = e.target.value.trim().slice(0, 30); if (!v) { e.target.value = myName; return; } myName = v;
+  try { await F.setDoc(D("users", me.uid), { name: v }, { merge: true }); await F.updateDoc(D("groups", gid, "members", me.uid), { name: v }); toast("Adın güncellendi."); } catch (err) { toast(errMsg(err)); }
 });
-$("resetPw").onclick = async () => { try { await F.sendPasswordResetEmail(auth, me.email); toast("Şifre sıfırlama e-postası gönderildi."); } catch (err) { toast(errMsg(err)); } };
+$("pinSet").onclick = () => { pinMode = "set1"; pinBuf = ""; drawPin(); $("lockMsg").textContent = "Yeni 4 haneli PIN gir"; $("pinCancel").hidden = false; show("lock"); };
+$("pinCancel").onclick = () => { pinMode = null; $("pinCancel").hidden = true; show("app"); };
+$("pinOff").onclick = async () => { if (await confirmDlg("PIN'i kaldır", "Bu cihazda PIN kilidi kapatılsın mı?", "Kaldır")) { LS.del("butce-pin"); renderMe(); toast("PIN kaldırıldı."); } };
+function showKey(k, isNew, msg) { openDlg(isNew ? "Kurtarma anahtarın" : "Kurtarma anahtarı", `<p class="note">${esc(msg || "Telefonunu değiştirirsen ya da uygulama verileri silinirse yöneticiliği geri almak için grup kodu ve bu anahtar gerekir. Şimdi ekran görüntüsünü al ya da bir yere yaz. Kimseyle paylaşma.")}</p><div class="key" style="margin:10px 0">${esc(k)}</div><p class="note">Grup kodu: <b>${esc(group ? group.code : "")}</b></p>`, `<button class="ghost" id="kCopy">Kopyala</button><button class="go" data-close>Kaydettim</button>`); $("kCopy").onclick = async () => { try { await navigator.clipboard.writeText(`Grup kodu: ${group.code}\nKurtarma anahtarı: ${k}`); toast("Kopyalandı."); } catch (e) { } }; }
+$("keyShow").onclick = async () => { try { const s = await F.getDoc(D("groups", gid, "secret", "key")); $("keyVal").textContent = s.exists() ? s.data().key : "—"; } catch (err) { toast(errMsg(err)); } };
+$("keyNew").onclick = async () => { if (!await confirmDlg("Anahtarı yenile", "Eski kurtarma anahtarı geçersiz olacak. Devam edilsin mi?", "Yenile")) return; const k = rnd(12); try { await F.setDoc(D("groups", gid, "secret", "key"), { key: k }); $("keyVal").textContent = k; showKey(k, true); } catch (err) { toast(errMsg(err)); } };
+$("help").onclick = () => runCmd("/yardım");
 $("leave").onclick = async () => {
   if (owner) {
-    if (!await confirmDlg("Grubu sil", "Grup ve davet kodu silinecek, kimse giriş yapamayacak. Kayıtlar veritabanında kalır ama erişilemez. Emin misin?", "Grubu sil")) return;
-    try { const b = F.writeBatch(db); if (group.code) b.delete(F.doc(db, "codes", group.code)); b.delete(gRef()); await b.commit(); } catch (err) { toast(errMsg(err)); return; }
+    if (!await confirmDlg("Grubu sil", "Grup silinecek, kimse giremeyecek. Bu geri alınamaz. Emin misin?", "Grubu sil")) return;
+    try { const b = F.writeBatch(db); if (group.code) b.delete(D("codes", group.code)); b.delete(D("groups", gid)); await b.commit(); } catch (err) { toast(errMsg(err)); return; }
   } else {
-    if (!await confirmDlg("Gruptan ayrıl", "Bu gruptan ayrılmak istiyor musun? Tekrar katılmak için davet kodu gerekir.", "Ayrıl")) return;
-    try { await F.deleteDoc(F.doc(db, "groups", gid, "members", me.uid)); } catch (err) { }
+    if (!await confirmDlg("Gruptan ayrıl", "Tekrar girmek için yeniden istek göndermen gerekir.", "Ayrıl")) return;
+    try { await F.deleteDoc(D("groups", gid, "members", me.uid)); } catch (err) { }
   }
   leaveLocal("");
 };
@@ -622,10 +821,10 @@ $("install").onclick = async () => { if (!deferredPrompt) return; deferredPrompt
 
 /* ---------- komut çubuğu ---------- */
 const CMDS = [
-  ["/yardım", "Tüm komutları göster", 0], ["/ay 3", "Belirli aya git (1-12), /ay ileri, /ay geri", 0], ["/ara metin", "Hareketlerde ara", 0], ["/özet", "Özet sekmesini aç", 0],
-  ["/limit 20000", "Aylık toplam limiti ayarla (0 = kaldır)", 1], ["/kategori Kahve 1500", "Gider kategorisi ekle, isteğe bağlı limitle", 1], ["/gelirkategori Kira geliri", "Gelir kategorisi ekle", 1], ["/kategorisil Kahve", "Kategoriyi kaldır", 1],
-  ["/duyuru metin", "Herkese duyuru göster (boş = kaldır)", 1], ["/kilitle", "Yeni kayıtları kapat", 1], ["/aç", "Yeni kayıtları aç", 1], ["/onay aç", "Harcamalar onayına düşsün (aç/kapat)", 1],
-  ["/onaylahepsi", "Bekleyen tüm harcamaları onayla", 1], ["/kod", "Davet kodunu paylaş", 1], ["/yenikod", "Yeni davet kodu üret (eskisi iptal olur)", 1], ["/csv", "Bu ayı CSV olarak dışa aktar", 1], ["/yönetim", "Yönetim sekmesini aç", 1]];
+  ["/yardım", "Tüm komutları göster", 0], ["/ekle", "Yeni kayıt penceresini aç", 0], ["/ay 3", "Belirli aya git (1-12), /ay ileri, /ay geri", 0], ["/ara metin", "Hareketlerde ara", 0], ["/özet", "Özet ekranı", 0], ["/hedef", "Hedefler ekranı", 0], ["/pin", "PIN kilidi belirle", 0],
+  ["/limit 20000", "Aylık toplam limit (0 = kaldır)", 1], ["/kişilimit Ayşe 3000", "Kişiye aylık limit", 1], ["/kategori Kahve 1500", "Gider kategorisi ekle (limitli)", 1], ["/gelirkategori Kira geliri", "Gelir kategorisi ekle", 1], ["/kategorisil Kahve", "Kategoriyi kaldır", 1],
+  ["/duyuru metin", "Herkese duyuru (boş = kaldır)", 1], ["/kilitle", "Yeni kayıtları kapat", 1], ["/aç", "Yeni kayıtları aç", 1], ["/onay aç", "Harcamalar onayıma düşsün (aç/kapat)", 1], ["/onaylahepsi", "Bekleyen harcamaları onayla", 1],
+  ["/istekler", "Katılma isteklerini göster", 1], ["/kabulhepsi", "Bütün katılma isteklerini kabul et", 1], ["/davet", "Davet bağlantısını paylaş", 1], ["/yenikod", "Yeni grup kodu (eskisi iptal)", 1], ["/csv", "Bu ayı CSV indir", 1], ["/yönetim", "Yönetim ekranı", 1]];
 let sugI = -1;
 function sugList() { const v = low($("cmd").value.trim()); if (!v.startsWith("/")) return []; const w = v.split(" ")[0]; return CMDS.filter(c => (!c[2] || owner) && low(c[0]).startsWith(w)); }
 function drawSug() { const L = sugList(); $("sug").style.display = L.length ? "block" : "none"; $("sug").innerHTML = L.map((c, i) => `<button type="button" data-c="${esc(c[0].split(" ")[0])}" class="${i === sugI ? "on" : ""}"><code>${esc(c[0])}</code><span>${esc(c[1])}</span></button>`).join(""); }
@@ -637,30 +836,34 @@ $("cmd").addEventListener("keydown", e => {
   if (e.key === "ArrowDown" && L.length) { e.preventDefault(); sugI = (sugI + 1) % L.length; drawSug(); }
   else if (e.key === "ArrowUp" && L.length) { e.preventDefault(); sugI = (sugI - 1 + L.length) % L.length; drawSug(); }
   else if (e.key === "Escape") $("sug").style.display = "none";
-  else if (e.key === "Enter") {
-    e.preventDefault(); if (sugI >= 0 && L[sugI] && !$("cmd").value.includes(" ")) { $("cmd").value = L[sugI][0].split(" ")[0] + " "; sugI = -1; drawSug(); return; }
-    const v = $("cmd").value.trim(); if (!v) return; if (runCmd(v) !== false) { $("cmd").value = ""; $("sug").style.display = "none"; $("cmd").blur(); }
-  }
+  else if (e.key === "Enter") { e.preventDefault(); if (sugI >= 0 && L[sugI] && !$("cmd").value.includes(" ")) { $("cmd").value = L[sugI][0].split(" ")[0] + " "; sugI = -1; drawSug(); return; }
+    const v = $("cmd").value.trim(); if (!v) return; if (runCmd(v) !== false) { $("cmd").value = ""; $("sug").style.display = "none"; $("cmd").blur(); } }
 });
 const needOwner = () => { if (!owner) { toast("Bu komut yalnızca yönetici içindir."); return true; } return false; };
+function goTab(t) { tab = t; showTab(); }
 function runCmd(v) {
   if (!v.startsWith("/")) return quickAdd(v);
-  const sp = v.indexOf(" "), c = low(sp < 0 ? v : v.slice(0, sp)), arg = sp < 0 ? "" : v.slice(sp + 1).trim();
+  const sp = v.indexOf(" "), c = low(sp < 0 ? v : v.slice(0, sp)).replace(/ı/g, "i").replace(/ş/g, "s").replace(/ö/g, "o").replace(/ü/g, "u").replace(/ç/g, "c").replace(/ğ/g, "g"), arg = sp < 0 ? "" : v.slice(sp + 1).trim();
   switch (c) {
-    case "/yardım": case "/yardim": openDlg("Komutlar", `<p class="note">Hızlı ekleme: <b>250 market kahve</b> · gelir için <b>+5000 maaş</b></p><ul>${CMDS.filter(x => !x[2] || owner).map(x => `<li style="padding:8px 0;border-bottom:1px solid var(--rule)"><code style="font-weight:600;color:var(--teal)">${esc(x[0])}</code><br><span class="note">${esc(x[1])}</span></li>`).join("")}</ul>`); return;
+    case "/yardim": openDlg("Komutlar", `<p class="note">Hızlı ekleme: <b>250 market kahve</b> · gelir: <b>+5000 maaş</b></p><ul>${CMDS.filter(x => !x[2] || owner).map(x => `<li style="padding:8px 0;border-bottom:1px solid var(--rule)"><code style="font-weight:700;color:var(--teal)">${esc(x[0])}</code><br><span class="note">${esc(x[1])}</span></li>`).join("")}</ul>`); return;
+    case "/ekle": openAdd(); return;
     case "/ay": { const a = low(arg); if (a === "ileri") cur = shiftM(cur, 1); else if (a === "geri") cur = shiftM(cur, -1); else { const n = parseInt(a); if (n >= 1 && n <= 12) cur = cur.slice(0, 4) + "-" + String(n).padStart(2, "0"); else { toast("Örn. /ay 3"); return false; } } render(); return; }
-    case "/ara": $("q").value = arg; tab = "rec"; showTab(); return;
-    case "/özet": case "/ozet": tab = "sum"; showTab(); return;
-    case "/yönetim": case "/yonetim": if (needOwner()) return false; tab = "adm"; showTab(); return;
-    case "/limit": { if (needOwner()) return false; const n = num(arg); if (!(n >= 0)) { toast("Örn. /limit 20000"); return false; } cfg.limit = n; saveCfg(); toast(n ? "Aylık limit " + fmt(n) + " oldu." : "Limit kaldırıldı."); return; }
+    case "/ara": $("q").value = arg; goTab("rec"); return;
+    case "/ozet": goTab("sum"); return;
+    case "/hedef": goTab("goal"); return;
+    case "/pin": $("pinSet").click(); return;
+    case "/yonetim": case "/istekler": if (needOwner()) return false; goTab("adm"); return;
+    case "/limit": { if (needOwner()) return false; const n = num(arg); if (!(n >= 0)) { toast("Örn. /limit 20000"); return false; } cfg.limit = n; saveCfg(); toast(n ? "Aylık limit " + fmt0(n) + " oldu." : "Limit kaldırıldı."); return; }
+    case "/kisilimit": { if (needOwner()) return false; const m = arg.match(/^(.*?)\s+([\d.,]+)$/); if (!m) { toast("Örn. /kişilimit Ayşe 3000"); return false; } const u = Object.keys(members).find(x => low(who(x)).startsWith(low(m[1].trim()))); if (!u) { toast("Kişi bulunamadı."); return false; } const n = num(m[2]); if (n > 0) cfg.plim[u] = n; else delete cfg.plim[u]; saveCfg(); toast(who(u) + " için limit " + (n > 0 ? fmt0(n) : "kaldırıldı")); return; }
     case "/kategori": case "/gelirkategori": { if (needOwner()) return false; const m = arg.match(/^(.*?)(?:\s+([\d.,]+))?$/); if (addCat(c === "/kategori" ? "exp" : "inc", m && m[1], m && m[2] ? num(m[2]) : 0)) { toast((m[1] || "").trim() + " eklendi."); return; } return false; }
     case "/kategorisil": { if (needOwner()) return false; for (const t of ["exp", "inc"]) { const i = cfg.cats[t].findIndex(x => low(x.n) === low(arg)); if (i >= 0) { if (cfg.cats[t].length <= 1) { toast("En az bir kategori kalmalı."); return false; } cfg.cats[t].splice(i, 1); saveCfg(); toast(arg + " silindi."); return; } } toast("Kategori bulunamadı."); return false; }
     case "/duyuru": if (needOwner()) return false; cfg.note = arg.slice(0, 200); saveCfg(); toast(arg ? "Duyuru yayında." : "Duyuru kaldırıldı."); return;
     case "/kilitle": if (needOwner()) return false; cfg.locked = true; saveCfg(); toast("Yeni kayıtlar kilitlendi."); return;
-    case "/aç": case "/ac": if (needOwner()) return false; cfg.locked = false; saveCfg(); toast("Kayıtlar açıldı."); return;
+    case "/ac": if (needOwner()) return false; cfg.locked = false; saveCfg(); toast("Kayıtlar açıldı."); return;
     case "/onay": { if (needOwner()) return false; const a = low(arg); cfg.approval = a === "aç" || a === "ac" ? true : a === "kapat" ? false : !cfg.approval; saveCfg(); toast("Onay sistemi " + (cfg.approval ? "açık." : "kapalı.")); return; }
     case "/onaylahepsi": { if (needOwner()) return false; const P = all().filter(t => t.status === "pending"); P.forEach(t => putItem({ ...t, status: "ok" })); toast(P.length + " harcama onaylandı."); return; }
-    case "/kod": if (needOwner()) return false; $("shareCode").click(); return;
+    case "/kabulhepsi": { if (needOwner()) return false; if (!requests.length) { toast("Bekleyen istek yok."); return; } const b = F.writeBatch(db); for (const r of requests) { b.set(D("groups", gid, "members", r.id), { name: r.name, joined: Date.now() }); b.delete(D("groups", gid, "requests", r.id)); } const n = requests.length; b.commit().then(() => toast(n + " kişi gruba katıldı.")).catch(err => toast(errMsg(err))); return; }
+    case "/davet": case "/kod": if (needOwner()) return false; $("shareCode").click(); return;
     case "/yenikod": if (needOwner()) return false; newCode(); return;
     case "/csv": if (needOwner()) return false; exportCsv(inMonth(cur), `butce-${cur}.csv`); return;
   }
@@ -678,19 +881,15 @@ function quickAdd(v) {
 }
 
 /* ---------- arayüz ---------- */
-function showTab() { for (const b of document.querySelectorAll("[data-t]")) b.setAttribute("aria-selected", b.dataset.t === tab); for (const p of ["rec", "sum", "adm", "me"]) $("p-" + p).classList.toggle("on", p === tab); render(); }
-for (const b of document.querySelectorAll("[data-t]")) b.onclick = () => { tab = b.dataset.t; showTab(); };
-$("tExp").onclick = () => { type = "exp"; render(); }; $("tInc").onclick = () => { type = "inc"; render(); }; $("cat").onchange = render;
+function showTab() { for (const b of document.querySelectorAll("nav.bot [data-t]")) b.setAttribute("aria-selected", b.dataset.t === tab); for (const p of ["rec", "sum", "goal", "adm", "me"]) $("p-" + p).classList.toggle("on", p === tab); render(); if (tab === "goal") renderGoals(); }
+for (const b of document.querySelectorAll("nav.bot [data-t]")) b.onclick = () => { tab = b.dataset.t; showTab(); window.scrollTo({ top: 0, behavior: "smooth" }); };
 $("prev").onclick = () => { cur = shiftM(cur, -1); render(); }; $("next").onclick = () => { cur = shiftM(cur, 1); render(); };
 $("q").oninput = renderList; $("fCat").onchange = renderList; $("fWho").onchange = renderList;
-function toast(msg, undo) { $("tmsg").textContent = msg; $("undo").style.display = undo ? "" : "none"; $("toast").classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => $("toast").classList.remove("on"), 4500); }
-function openDlg(t, h, btns) { $("dT").textContent = t; $("dB").innerHTML = h; $("dBtns").innerHTML = btns || `<button class="ghost" data-close>Kapat</button>`; try { $("dlg").showModal(); } catch (e) { } }
-function confirmDlg(t, h, yes) { return new Promise(res => { openDlg(t, `<p>${h}</p>`, `<button class="ghost" data-r="0">Vazgeç</button><button class="go" data-r="1">${esc(yes)}</button>`); $("dBtns").onclick = e => { const b = e.target.closest("[data-r]"); if (!b) return; $("dlg").close(); $("dBtns").onclick = null; res(b.dataset.r === "1"); }; }); }
-$("dlg").addEventListener("click", e => { if (e.target.closest("[data-close]")) $("dlg").close(); });
+function toast(msg, undo) { $("tmsg").textContent = msg; $("undo").style.display = undo ? "" : "none"; $("toast").classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => $("toast").classList.remove("on"), 4000); }
+function openDlg(t, h, btns) { $("dT").textContent = t; $("dB").innerHTML = h; $("dBtns").innerHTML = btns || ""; $("dBtns").onclick = null; try { if (!$("dlg").open) $("dlg").showModal(); } catch (e) { } }
+function confirmDlg(t, h, yes) { return new Promise(res => { openDlg(t, `<p>${h}</p>`, `<button class="ghost" data-r="0">Vazgeç</button><button class="go" data-r="1">${esc(yes)}</button>`); let done = false; const fin = v => { if (done) return; done = true; res(v); }; $("dBtns").onclick = e => { const b = e.target.closest("[data-r]"); if (!b) return; $("dlg").close(); fin(b.dataset.r === "1"); }; $("dlg").addEventListener("close", () => fin(false), { once: true }); }); }
+function formDlg(t, h, yes, onOk) { openDlg(t, `<form id="dF" style="display:grid;gap:12px">${h}<button class="go">${esc(yes)}</button></form>`); setTimeout(() => { const i = $("dB").querySelector("input"); i && i.focus(); }, 50); $("dF").onsubmit = e => { e.preventDefault(); if (onOk() !== false) $("dlg").close(); }; }
 window.addEventListener("online", () => $("off").hidden = true); window.addEventListener("offline", () => $("off").hidden = false);
-$("date").value = today();
-
-
 if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("sw.js").catch(() => { });
 </script>
 </body>
