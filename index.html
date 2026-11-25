@@ -176,29 +176,25 @@ dialog::backdrop{background:rgba(6,20,22,.5)}
 <div id="welcome" class="screen" hidden>
  <div class="box">
   <div class="brand"><div class="logo">₺</div><h1>Bütçe Takip</h1><p>Ailenin ya da ekibinin harcamaları tek yerde</p></div>
-  <div class="seg2"><button id="wJoin" aria-pressed="true">Gruba katıl</button><button id="wCreate" aria-pressed="false">Grup kur</button></div>
   <form class="panel" id="joinF">
-   <h2>Gruba katılma isteği gönder</h2>
+   <h2 id="jTitle">Katılma isteği gönder</h2>
    <label>Adın<input id="jName" maxlength="30" required placeholder="Örn. Ayşe" autocomplete="given-name"></label>
-   <label>Grup kodu<input id="jCode" maxlength="8" required placeholder="Örn. K7Q2XM" autocapitalize="characters" style="text-transform:uppercase;letter-spacing:.15em"></label>
    <div class="err" id="jErr" hidden></div>
    <button class="go">İstek gönder</button>
-   <p class="note">Şifre veya e-posta gerekmez. Grubun yöneticisi isteğini onaylayınca uygulama açılır.</p>
+   <p class="note">Şifre, e-posta ya da kod gerekmez. Yönetici isteğini onaylayınca uygulama açılır.</p>
   </form>
   <form class="panel" id="createF" hidden>
-   <h2>Yeni grup kur</h2>
+   <h2>İlk kurulum</h2><p class="note">Uygulama henüz kurulmamış. Kuran kişi yönetici olur ve herkesin isteğini o onaylar.</p>
    <label>Adın<input id="cName" maxlength="30" required placeholder="Örn. Batur"></label>
    <label>Grup adı<input id="gName" maxlength="40" required placeholder="Örn. Ev bütçesi"></label>
    <div class="err" id="cErr" hidden></div>
-   <button class="go">Grubu kur, yönetici ol</button>
-   <p class="note">Grubu kuran kişi yönetici olur. Katılma isteklerini sen onaylarsın.</p>
+   <button class="go">Kur ve yönetici ol</button>
   </form>
   <button class="link" id="wRecover" type="button">Yöneticiyim, kurtarma anahtarım var</button>
   <form class="panel" id="recF" hidden>
    <h2>Yöneticiliği geri al</h2>
-   <p class="note">Telefon değiştirdiysen ya da uygulama verileri silindiyse, grup kodu ve kurtarma anahtarınla yöneticiliği bu cihaza taşı.</p>
+   <p class="note">Telefon değiştirdiysen ya da uygulama verileri silindiyse, kurtarma anahtarınla yöneticiliği bu cihaza taşı.</p>
    <label>Adın<input id="rName" maxlength="30" required></label>
-   <label>Grup kodu<input id="rCode" maxlength="8" required style="text-transform:uppercase;letter-spacing:.15em"></label>
    <label>Kurtarma anahtarı<input id="rKey" maxlength="20" required style="text-transform:uppercase;letter-spacing:.08em"></label>
    <div class="err" id="rErr" hidden></div>
    <button class="go">Yöneticiliği al</button>
@@ -264,7 +260,7 @@ dialog::backdrop{background:rgba(6,20,22,.5)}
   <div class="card" id="reqCard"><h3>Katılma istekleri</h3><div id="reqs"></div></div>
   <div class="card" id="pendCard"><h3>Onay bekleyen harcamalar</h3><div id="pendList"></div></div>
   <div class="grid2">
-   <div class="card invite"><h3>Grup kodu</h3><div class="code num" id="code">——</div><p class="note">Bu kodu ya da davet bağlantısını paylaş. Gelen istekler yukarıda görünür.</p><div class="btns"><button class="go" id="shareCode">Davet gönder</button><button class="ghost" id="newCode">Yeni kod</button></div></div>
+   <div class="card invite"><h3>Davet et</h3><p class="note">Uygulamanın bağlantısını gönder. Açan kişi adını yazar, istek buraya düşer, sen onaylarsın.</p><div class="btns" style="margin-top:10px"><button class="go" id="shareCode">Davet bağlantısı gönder</button></div></div>
    <div class="card"><h3>Kişiler</h3><div id="aPeople"></div></div>
    <div class="card"><h3>Genel ayarlar</h3>
     <label>Grup adı<input id="aGName" maxlength="40"></label>
@@ -284,7 +280,7 @@ dialog::backdrop{background:rgba(6,20,22,.5)}
   <div class="grid2">
    <div class="card"><h3>Profilim</h3><label>Görünen adım<input id="meName" maxlength="30"></label><p class="note" id="meRole" style="margin-top:10px"></p></div>
    <div class="card"><h3>PIN kilidi</h3><p class="note" id="pinState"></p><div class="btns" style="margin-top:10px"><button class="ghost" id="pinSet">PIN belirle</button><button class="ghost" id="pinOff" hidden>PIN'i kaldır</button></div></div>
-   <div class="card" id="keyCard" hidden><h3>Yönetici kurtarma anahtarı</h3><p class="note">Telefonunu değiştirirsen ya da uygulama verileri silinirse yöneticiliği geri almak için bu anahtar ve grup kodu gerekir. Ekran görüntüsünü al ya da bir yere yaz, kimseyle paylaşma.</p><div class="key" id="keyVal">••••</div><div class="btns" style="margin-top:10px"><button class="ghost" id="keyShow">Göster</button><button class="ghost" id="keyNew">Yenile</button></div></div>
+   <div class="card" id="keyCard" hidden><h3>Yönetici kurtarma anahtarı</h3><p class="note">Telefonunu değiştirirsen ya da uygulama verileri silinirse yöneticiliği geri almak için bu anahtar gerekir. Ekran görüntüsünü al ya da bir yere yaz, kimseyle paylaşma.</p><div class="key" id="keyVal">••••</div><div class="btns" style="margin-top:10px"><button class="ghost" id="keyShow">Göster</button><button class="ghost" id="keyNew">Yenile</button></div></div>
    <div class="card"><h3>Uygulama</h3><p class="note">Ana ekrana eklemek için Android'de Chrome → ⋮ → Ana ekrana ekle → Yükle; iPhone'da Safari → Paylaş → Ana Ekrana Ekle.</p><div class="btns" style="margin-top:10px"><button class="go" id="install" hidden>Uygulamayı yükle</button><button class="ghost" id="help">Komutlar</button></div></div>
    <div class="card"><h3>Grup</h3><p id="meGroup"></p><button class="ghost danger" id="leave">Gruptan ayrıl</button></div>
   </div>
@@ -424,77 +420,74 @@ async function boot() {
 }
 boot().catch(e => { console.error(e); $("splashMsg").textContent = "Bağlanılamadı. İnternetini kontrol edip uygulamayı yeniden aç."; });
 
-function stopAll() { unsub.forEach(f => { try { f(); } catch (e) { } }); unsub = []; dataUnsub.forEach(f => { try { f(); } catch (e) { } }); dataUnsub = []; items = new Map(); members = {}; requests = []; group = null; gid = null; owner = false; recDone = false; editId = null; openId = null; tab = "rec"; $("cmd").value = ""; $("q").value = ""; }
+function stopAll() { $("toast").classList.remove("on"); unsub.forEach(f => { try { f(); } catch (e) { } }); unsub = []; dataUnsub.forEach(f => { try { f(); } catch (e) { } }); dataUnsub = []; items = new Map(); members = {}; requests = []; group = null; gid = null; owner = false; recDone = false; editId = null; openId = null; tab = "rec"; $("cmd").value = ""; $("q").value = ""; }
 
+const GID = "ana";
 async function route() {
   stopAll(); show("splash");
   let u = {}; try { const s = await F.getDoc(D("users", me.uid)); u = s.exists() ? s.data() : {}; } catch (e) { u = LS.get("butce-user") || {}; }
   myName = String(u.name || "").slice(0, 30);
-  const g = u.gid;
-  if (!g) return showWelcome();
   try {
-    const m = await F.getDoc(D("groups", g, "members", me.uid));
-    if (m.exists()) { myName = String(m.data().name || myName); return openGroup(g); }
-    const r = await F.getDoc(D("groups", g, "requests", me.uid));
-    if (r.exists() && r.data().status === "pending") return showWaiting(g);
-    if (r.exists() && r.data().status === "rejected") return showWelcome("Katılma isteğin reddedildi.");
-    return showWelcome(u.was ? "Bu gruptan çıkarıldın. Yeni bir istek gönderebilirsin." : "");
-  } catch (e) { if (LS.get("butce-member") === g) return openGroup(g); showWelcome(errMsg(e)); }
+    const m = await F.getDoc(D("groups", GID, "members", me.uid));
+    if (m.exists()) { myName = String(m.data().name || myName); return openGroup(GID); }
+    const r = await F.getDoc(D("groups", GID, "requests", me.uid));
+    if (r.exists() && r.data().status === "pending") return showWaiting(GID);
+    if (r.exists() && r.data().status === "rejected") return showWelcome("Katılma isteğin reddedildi. İstersen tekrar gönderebilirsin.");
+    return showWelcome(u.was ? "Gruptan çıkarıldın. İstersen yeniden istek gönderebilirsin." : "");
+  } catch (e) { if (LS.get("butce-member") === GID) return openGroup(GID); showWelcome(errMsg(e)); }
 }
 
 /* ---------- hoş geldin ---------- */
-function wMode(m) { $("wJoin").setAttribute("aria-pressed", m === "join"); $("wCreate").setAttribute("aria-pressed", m === "create"); $("joinF").hidden = m !== "join"; $("createF").hidden = m !== "create"; $("recF").hidden = m !== "rec"; for (const e of ["jErr", "cErr", "rErr"]) $(e).hidden = true; }
-$("wJoin").onclick = () => wMode("join"); $("wCreate").onclick = () => wMode("create"); $("wRecover").onclick = () => wMode($("recF").hidden ? "rec" : "join");
-function showWelcome(msg) {
-  stopAll(); const h = (location.hash.match(/katil-([A-Za-z0-9]{4,8})/) || [])[1];
-  wMode("join"); if (h) $("jCode").value = h.toUpperCase();
+let wState = "join";
+function wMode(m) { wState = m; $("joinF").hidden = m !== "join"; $("createF").hidden = m !== "create"; $("recF").hidden = m !== "rec"; $("wRecover").hidden = m === "create"; $("wRecover").textContent = m === "rec" ? "Geri dön" : "Yöneticiyim, kurtarma anahtarım var"; for (const e of ["jErr", "cErr", "rErr"]) $(e).hidden = true; }
+$("wRecover").onclick = () => wMode(wState === "rec" ? "join" : "rec");
+async function showWelcome(msg) {
+  stopAll(); show("splash");
+  let meta = null; try { const s = await F.getDoc(D("meta", GID)); meta = s.exists() ? s.data() : null; } catch (e) { }
   for (const i of ["jName", "cName", "rName"]) if (!$(i).value) $(i).value = myName;
-  if (msg) { $("jErr").textContent = msg; $("jErr").hidden = false; }
+  if (meta) { $("jTitle").textContent = "“" + String(meta.name || "Bütçe").slice(0, 40) + "” grubuna katıl"; wMode("join"); if (msg) { $("jErr").textContent = msg; $("jErr").hidden = false; } }
+  else { wMode("create"); if (msg) { $("cErr").textContent = msg; $("cErr").hidden = false; } }
   show("welcome");
 }
-const cleanCode = v => String(v).trim().toUpperCase().replace(/[^A-Z0-9]/g, "");
-async function codeToGid(code) { const c = await F.getDoc(D("codes", code)); return c.exists() ? String(c.data().gid) : null; }
 function busy(form, on) { for (const b of form.querySelectorAll("button")) b.disabled = on; }
 $("joinF").addEventListener("submit", async e => {
   e.preventDefault(); const f = e.target; busy(f, true); $("jErr").hidden = true;
-  const name = $("jName").value.trim().slice(0, 30), code = cleanCode($("jCode").value);
+  const name = $("jName").value.trim().slice(0, 30);
   try {
-    const g = await codeToGid(code); if (!g) throw { code: "x-code" };
-    try { await F.deleteDoc(D("groups", g, "requests", me.uid)); } catch (e) { }
-    await F.setDoc(D("groups", g, "requests", me.uid), { name, code, status: "pending", ts: Date.now() });
-    await F.setDoc(D("users", me.uid), { name, gid: g }, { merge: true }); LS.set("butce-user", { name, gid: g });
-    myName = name; showWaiting(g);
-  } catch (err) { $("jErr").textContent = err.code === "x-code" ? "Bu grup kodu bulunamadı. Yöneticiden güncel kodu iste." : errMsg(err); $("jErr").hidden = false; }
+    try { await F.deleteDoc(D("groups", GID, "requests", me.uid)); } catch (e) { }
+    await F.setDoc(D("groups", GID, "requests", me.uid), { name, status: "pending", ts: Date.now() });
+    await F.setDoc(D("users", me.uid), { name, gid: GID, was: false }, { merge: true }); LS.set("butce-user", { name, gid: GID });
+    myName = name; showWaiting(GID);
+  } catch (err) { $("jErr").textContent = errMsg(err); $("jErr").hidden = false; }
   busy(f, false);
 });
 $("createF").addEventListener("submit", async e => {
   e.preventDefault(); const f = e.target; busy(f, true); $("cErr").hidden = true;
-  const name = $("cName").value.trim().slice(0, 30);
+  const name = $("cName").value.trim().slice(0, 30), gname = $("gName").value.trim().slice(0, 40);
   try {
-    const ref = F.doc(C("groups")), code = rnd(6), key = rnd(12), b = F.writeBatch(db);
-    b.set(ref, { name: $("gName").value.trim().slice(0, 40), owner: me.uid, code, cfg: JSON.parse(JSON.stringify(DEF)), created: Date.now() });
-    b.set(D("codes", code), { gid: ref.id });
-    b.set(D("groups", ref.id, "members", me.uid), { name, joined: Date.now() });
-    b.set(D("groups", ref.id, "secret", "key"), { key });
-    b.set(D("users", me.uid), { name, gid: ref.id }, { merge: true });
-    await b.commit(); myName = name; LS.set("butce-user", { name, gid: ref.id });
-    openGroup(ref.id);
+    const key = rnd(12), b = F.writeBatch(db);
+    b.set(D("groups", GID), { name: gname, owner: me.uid, cfg: JSON.parse(JSON.stringify(DEF)), created: Date.now() });
+    b.set(D("meta", GID), { name: gname });
+    b.set(D("groups", GID, "members", me.uid), { name, joined: Date.now() });
+    b.set(D("groups", GID, "secret", "key"), { key });
+    b.set(D("users", me.uid), { name, gid: GID }, { merge: true });
+    await b.commit(); myName = name; LS.set("butce-user", { name, gid: GID });
+    openGroup(GID);
     setTimeout(() => showKey(key, true), 600);
-  } catch (err) { $("cErr").textContent = errMsg(err); $("cErr").hidden = false; }
+  } catch (err) { $("cErr").textContent = err.code === "permission-denied" ? "Bu uygulamanın zaten bir yöneticisi var. Katılma isteği gönder." : errMsg(err); $("cErr").hidden = false; if (err.code === "permission-denied") setTimeout(() => showWelcome(), 1500); }
   busy(f, false);
 });
 $("recF").addEventListener("submit", async e => {
   e.preventDefault(); const f = e.target; busy(f, true); $("rErr").hidden = true;
-  const name = $("rName").value.trim().slice(0, 30), code = cleanCode($("rCode").value), key = cleanCode($("rKey").value);
+  const name = $("rName").value.trim().slice(0, 30), key = String($("rKey").value).trim().toUpperCase().replace(/[^A-Z0-9]/g, "");
   try {
-    const g = await codeToGid(code); if (!g) throw { code: "x-code" };
-    try { await F.updateDoc(D("groups", g), { owner: me.uid, claim: key }); } catch (err) { throw { code: "x-key" }; }
-    await F.setDoc(D("groups", g, "members", me.uid), { name, joined: Date.now() });
-    const nk = rnd(12); await F.setDoc(D("groups", g, "secret", "key"), { key: nk });
-    await F.updateDoc(D("groups", g), { claim: F.deleteField() });
-    await F.setDoc(D("users", me.uid), { name, gid: g }, { merge: true }); myName = name;
-    openGroup(g); setTimeout(() => showKey(nk, true, "Yöneticilik bu cihaza taşındı. Eski anahtar artık geçersiz; yenisini sakla:"), 600);
-  } catch (err) { $("rErr").textContent = err.code === "x-code" ? "Grup kodu bulunamadı." : err.code === "x-key" ? "Kurtarma anahtarı yanlış." : errMsg(err); $("rErr").hidden = false; }
+    try { await F.updateDoc(D("groups", GID), { owner: me.uid, claim: key }); } catch (err) { throw { code: "x-key" }; }
+    await F.setDoc(D("groups", GID, "members", me.uid), { name, joined: Date.now() });
+    const nk = rnd(12); await F.setDoc(D("groups", GID, "secret", "key"), { key: nk });
+    await F.updateDoc(D("groups", GID), { claim: F.deleteField() });
+    await F.setDoc(D("users", me.uid), { name, gid: GID }, { merge: true }); myName = name;
+    openGroup(GID); setTimeout(() => showKey(nk, true, "Yöneticilik bu cihaza taşındı. Eski anahtar artık geçersiz; yenisini sakla:"), 600);
+  } catch (err) { $("rErr").textContent = err.code === "x-key" ? "Kurtarma anahtarı yanlış." : errMsg(err); $("rErr").hidden = false; }
   busy(f, false);
 });
 
@@ -502,7 +495,7 @@ $("recF").addEventListener("submit", async e => {
 function showWaiting(g) {
   stopAll(); gid = null; $("wTitle").textContent = "İsteğin gönderildi"; $("wText").textContent = "Yönetici onayladığında uygulama kendiliğinden açılacak. Bu ekranı kapatıp sonra tekrar açabilirsin.";
   show("waiting");
-  unsub.push(F.onSnapshot(D("groups", g, "members", me.uid), s => { if (s.exists()) { toast("İsteğin onaylandı, hoş geldin!"); openGroup(g); } }, () => { }));
+  unsub.push(F.onSnapshot(D("groups", g, "members", me.uid), s => { if (s.exists()) { openGroup(g); toast("İsteğin onaylandı, hoş geldin!"); } }, () => { }));
   unsub.push(F.onSnapshot(D("groups", g, "requests", me.uid), s => {
     if (s.exists() && s.data().status === "rejected") showWelcome("Katılma isteğin reddedildi.");
     else if (!s.exists()) setTimeout(async () => { try { const m = await F.getDoc(D("groups", g, "members", me.uid)); if (!m.exists() && !$("waiting").hidden) showWelcome("İsteğin kaldırıldı."); } catch (e) { } }, 2500);
@@ -544,7 +537,7 @@ async function leaveLocal(msg, kicked) {
 /* ---------- yazma ---------- */
 let cfgT = 0, cfgExtra = {}, cfgPending = false;
 function saveCfg(extra) {
-  render(); Object.assign(cfgExtra, extra || {}); if (extra && extra.name && group) group.name = extra.name; clearTimeout(cfgT); cfgPending = true;
+  render(); Object.assign(cfgExtra, extra || {}); if (extra && extra.name && group) { group.name = extra.name; F.setDoc(D("meta", GID), { name: extra.name }).catch(() => { }); } clearTimeout(cfgT); cfgPending = true;
   cfgT = setTimeout(() => { const x = cfgExtra; cfgExtra = {}; F.updateDoc(D("groups", gid), { cfg: JSON.parse(JSON.stringify(cfg)), ...x }).catch(err => toast("Kaydedilemedi: " + errMsg(err))).finally(() => { if (!cfgExtra.__n) cfgPending = false; }); }, 250);
 }
 const bodyOf = it => ({ uid: it.uid, by: it.by || "", type: it.type, cat: it.cat, amt: it.amt, date: it.date, note: it.note, pm: it.pm, status: it.status, ts: it.ts, auto: !!it.auto });
@@ -661,7 +654,6 @@ function renderGoals() {
 }
 function catRows(t) { return cfg.cats[t].map((c, i) => `<div class="crow"><input type="color" value="${esc(c.c)}" data-ct="${t}" data-i="${i}" data-f="c" aria-label="Renk"><input type="text" value="${esc(c.n)}" data-ct="${t}" data-i="${i}" data-f="n" aria-label="Kategori adı">${t === "exp" ? `<input class="lim" inputmode="decimal" placeholder="Limit ₺" value="${c.lim || ""}" data-ct="${t}" data-i="${i}" data-f="lim" aria-label="Limit">` : ""}<button class="x" data-del="${t}" data-i="${i}" aria-label="Sil">×</button></div>`).join(""); }
 function renderAdm() {
-  $("code").textContent = group.code || "——";
   $("reqCard").hidden = false;
   $("reqs").innerHTML = requests.length ? requests.map(r => `<div class="req"><span class="av" style="background:${avc(r.id)}">${esc(r.name.charAt(0).toUpperCase())}</span><span class="n">${esc(r.name)}<small>${esc(new Date(r.ts).toLocaleString("tr-TR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }))}</small></span><button class="go" data-acc="${esc(r.id)}" style="min-height:42px">Kabul et</button><button class="ghost" data-rej="${esc(r.id)}">Reddet</button></div>`).join("") : `<p class="note">Bekleyen istek yok. Yeni kişi eklemek için grup kodunu paylaş.</p>`;
   $("aGName").value = group.name || ""; $("aLim").value = cfg.limit || ""; $("aAppr").checked = cfg.approval; $("aLock").checked = cfg.locked; $("aNote").value = cfg.note; $("aPm").value = cfg.pms.join(", ");
@@ -752,14 +744,8 @@ $("p-adm").addEventListener("click", async e => {
 });
 function addCat(t, n, lim) { n = String(n || "").trim().slice(0, 30); if (!n) { toast("Kategori adı gir."); return false; } if (cfg.cats[t].some(c => low(c.n) === low(n))) { toast("Bu kategori zaten var."); return false; } cfg.cats[t].push({ n, c: PAL[cfg.cats[t].length % PAL.length], lim: lim > 0 ? lim : 0 }); saveCfg(); return true; }
 for (const [btn, t, box] of [["addExp", "exp", "aExp"], ["addInc", "inc", "aInc"]]) $(btn).onclick = () => { let i = 1; while (catOf(t, "Yeni kategori " + i)) i++; if (addCat(t, "Yeni kategori " + i)) { renderAdm(); const ins = $(box).querySelectorAll("input[type=text]"); ins[ins.length - 1].select(); } };
-async function newCode() {
-  const code = rnd(6), old = group.code, b = F.writeBatch(db);
-  b.set(D("codes", code), { gid }); b.update(D("groups", gid), { code }); if (old) b.delete(D("codes", old));
-  try { await b.commit(); toast("Yeni grup kodu: " + code + ". Eski kod artık çalışmaz."); } catch (err) { toast(errMsg(err)); }
-}
-$("newCode").onclick = newCode;
-const inviteLink = () => location.href.split("#")[0] + "#katil-" + group.code;
-$("shareCode").onclick = () => share(`"${group.name || "Bütçe"}" grubuna katıl!\n1) Bağlantıyı aç: ${inviteLink()}\n2) Adını yaz ve "İstek gönder"e dokun.\nGrup kodu: ${group.code}`, "Davet metni kopyalandı.");
+const inviteLink = () => location.href.split("#")[0];
+$("shareCode").onclick = () => share(`"${group.name || "Bütçe"}" bütçesine katıl!\n1) Bağlantıyı aç: ${inviteLink()}\n2) Adını yaz ve "İstek gönder"e dokun, ben onaylayınca açılır.`, "Davet metni kopyalandı.");
 async function share(text, okMsg) { try { if (navigator.share) { await navigator.share({ text }); return; } } catch (e) { if (e && e.name === "AbortError") return; } try { await navigator.clipboard.writeText(text); toast(okMsg); } catch (e) { openDlg("Paylaş", `<textarea readonly style="height:140px">${esc(text)}</textarea>`); } }
 function csv(arr) { const q = v => '"' + String(v).replace(/"/g, '""') + '"'; return "﻿" + ["Tarih;Kişi;Tür;Kategori;Tutar;Ödeme;Not;Durum"].concat([...arr].sort((a, b) => a.date.localeCompare(b.date)).map(t => [t.date, who(t.uid, t.by), t.type === "exp" ? "Gider" : "Gelir", t.cat, String(t.amt).replace(".", ","), t.pm, t.note, { ok: "Onaylı", pending: "Bekliyor", rejected: "Reddedildi" }[t.status]].map(q).join(";"))).join("\r\n"); }
 async function exportCsv(arr, name) {
@@ -801,14 +787,14 @@ $("meName").addEventListener("change", async e => {
 $("pinSet").onclick = () => { pinMode = "set1"; pinBuf = ""; drawPin(); $("lockMsg").textContent = "Yeni 4 haneli PIN gir"; $("pinCancel").hidden = false; show("lock"); };
 $("pinCancel").onclick = () => { pinMode = null; $("pinCancel").hidden = true; show("app"); };
 $("pinOff").onclick = async () => { if (await confirmDlg("PIN'i kaldır", "Bu cihazda PIN kilidi kapatılsın mı?", "Kaldır")) { LS.del("butce-pin"); renderMe(); toast("PIN kaldırıldı."); } };
-function showKey(k, isNew, msg) { openDlg(isNew ? "Kurtarma anahtarın" : "Kurtarma anahtarı", `<p class="note">${esc(msg || "Telefonunu değiştirirsen ya da uygulama verileri silinirse yöneticiliği geri almak için grup kodu ve bu anahtar gerekir. Şimdi ekran görüntüsünü al ya da bir yere yaz. Kimseyle paylaşma.")}</p><div class="key" style="margin:10px 0">${esc(k)}</div><p class="note">Grup kodu: <b>${esc(group ? group.code : "")}</b></p>`, `<button class="ghost" id="kCopy">Kopyala</button><button class="go" data-close>Kaydettim</button>`); $("kCopy").onclick = async () => { try { await navigator.clipboard.writeText(`Grup kodu: ${group.code}\nKurtarma anahtarı: ${k}`); toast("Kopyalandı."); } catch (e) { } }; }
+function showKey(k, isNew, msg) { openDlg(isNew ? "Kurtarma anahtarın" : "Kurtarma anahtarı", `<p class="note">${esc(msg || "Telefonunu değiştirirsen ya da uygulama verileri silinirse yöneticiliği geri almak için bu anahtar gerekir. Şimdi ekran görüntüsünü al ya da bir yere yaz. Kimseyle paylaşma.")}</p><div class="key" style="margin:10px 0">${esc(k)}</div>`, `<button class="ghost" id="kCopy">Kopyala</button><button class="go" data-close>Kaydettim</button>`); $("kCopy").onclick = async () => { try { await navigator.clipboard.writeText(`Bütçe Takip kurtarma anahtarı: ${k}`); toast("Kopyalandı."); } catch (e) { } }; }
 $("keyShow").onclick = async () => { try { const s = await F.getDoc(D("groups", gid, "secret", "key")); $("keyVal").textContent = s.exists() ? s.data().key : "—"; } catch (err) { toast(errMsg(err)); } };
 $("keyNew").onclick = async () => { if (!await confirmDlg("Anahtarı yenile", "Eski kurtarma anahtarı geçersiz olacak. Devam edilsin mi?", "Yenile")) return; const k = rnd(12); try { await F.setDoc(D("groups", gid, "secret", "key"), { key: k }); $("keyVal").textContent = k; showKey(k, true); } catch (err) { toast(errMsg(err)); } };
 $("help").onclick = () => runCmd("/yardım");
 $("leave").onclick = async () => {
   if (owner) {
     if (!await confirmDlg("Grubu sil", "Grup silinecek, kimse giremeyecek. Bu geri alınamaz. Emin misin?", "Grubu sil")) return;
-    try { const b = F.writeBatch(db); if (group.code) b.delete(D("codes", group.code)); b.delete(D("groups", gid)); await b.commit(); } catch (err) { toast(errMsg(err)); return; }
+    try { const b = F.writeBatch(db); b.delete(D("meta", GID)); b.delete(D("groups", gid)); await b.commit(); } catch (err) { toast(errMsg(err)); return; }
   } else {
     if (!await confirmDlg("Gruptan ayrıl", "Tekrar girmek için yeniden istek göndermen gerekir.", "Ayrıl")) return;
     try { await F.deleteDoc(D("groups", gid, "members", me.uid)); } catch (err) { }
@@ -824,7 +810,7 @@ const CMDS = [
   ["/yardım", "Tüm komutları göster", 0], ["/ekle", "Yeni kayıt penceresini aç", 0], ["/ay 3", "Belirli aya git (1-12), /ay ileri, /ay geri", 0], ["/ara metin", "Hareketlerde ara", 0], ["/özet", "Özet ekranı", 0], ["/hedef", "Hedefler ekranı", 0], ["/pin", "PIN kilidi belirle", 0],
   ["/limit 20000", "Aylık toplam limit (0 = kaldır)", 1], ["/kişilimit Ayşe 3000", "Kişiye aylık limit", 1], ["/kategori Kahve 1500", "Gider kategorisi ekle (limitli)", 1], ["/gelirkategori Kira geliri", "Gelir kategorisi ekle", 1], ["/kategorisil Kahve", "Kategoriyi kaldır", 1],
   ["/duyuru metin", "Herkese duyuru (boş = kaldır)", 1], ["/kilitle", "Yeni kayıtları kapat", 1], ["/aç", "Yeni kayıtları aç", 1], ["/onay aç", "Harcamalar onayıma düşsün (aç/kapat)", 1], ["/onaylahepsi", "Bekleyen harcamaları onayla", 1],
-  ["/istekler", "Katılma isteklerini göster", 1], ["/kabulhepsi", "Bütün katılma isteklerini kabul et", 1], ["/davet", "Davet bağlantısını paylaş", 1], ["/yenikod", "Yeni grup kodu (eskisi iptal)", 1], ["/csv", "Bu ayı CSV indir", 1], ["/yönetim", "Yönetim ekranı", 1]];
+  ["/istekler", "Katılma isteklerini göster", 1], ["/kabulhepsi", "Bütün katılma isteklerini kabul et", 1], ["/davet", "Davet bağlantısını paylaş", 1], ["/csv", "Bu ayı CSV indir", 1], ["/yönetim", "Yönetim ekranı", 1]];
 let sugI = -1;
 function sugList() { const v = low($("cmd").value.trim()); if (!v.startsWith("/")) return []; const w = v.split(" ")[0]; return CMDS.filter(c => (!c[2] || owner) && low(c[0]).startsWith(w)); }
 function drawSug() { const L = sugList(); $("sug").style.display = L.length ? "block" : "none"; $("sug").innerHTML = L.map((c, i) => `<button type="button" data-c="${esc(c[0].split(" ")[0])}" class="${i === sugI ? "on" : ""}"><code>${esc(c[0])}</code><span>${esc(c[1])}</span></button>`).join(""); }
@@ -863,8 +849,7 @@ function runCmd(v) {
     case "/onay": { if (needOwner()) return false; const a = low(arg); cfg.approval = a === "aç" || a === "ac" ? true : a === "kapat" ? false : !cfg.approval; saveCfg(); toast("Onay sistemi " + (cfg.approval ? "açık." : "kapalı.")); return; }
     case "/onaylahepsi": { if (needOwner()) return false; const P = all().filter(t => t.status === "pending"); P.forEach(t => putItem({ ...t, status: "ok" })); toast(P.length + " harcama onaylandı."); return; }
     case "/kabulhepsi": { if (needOwner()) return false; if (!requests.length) { toast("Bekleyen istek yok."); return; } const b = F.writeBatch(db); for (const r of requests) { b.set(D("groups", gid, "members", r.id), { name: r.name, joined: Date.now() }); b.delete(D("groups", gid, "requests", r.id)); } const n = requests.length; b.commit().then(() => toast(n + " kişi gruba katıldı.")).catch(err => toast(errMsg(err))); return; }
-    case "/davet": case "/kod": if (needOwner()) return false; $("shareCode").click(); return;
-    case "/yenikod": if (needOwner()) return false; newCode(); return;
+    case "/davet": if (needOwner()) return false; $("shareCode").click(); return;
     case "/csv": if (needOwner()) return false; exportCsv(inMonth(cur), `butce-${cur}.csv`); return;
   }
   toast("Bilinmeyen komut. /yardım yaz."); return false;
